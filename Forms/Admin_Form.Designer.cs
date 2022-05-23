@@ -108,7 +108,7 @@ namespace ITHelpWinFrm
             this.PanNav.Location = new System.Drawing.Point(81, 264);
             this.PanNav.Name = "PanNav";
             this.PanNav.Size = new System.Drawing.Size(1, 100);
-            this.PanNav.TabIndex = 3;
+            this.PanNav.TabIndex = 0;
             // 
             // butListUsers
             // 

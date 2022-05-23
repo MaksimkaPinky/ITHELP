@@ -257,7 +257,7 @@ namespace ITHelpWinFrm
             this.дата_РожденияDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.userBindingSource, "Дата_Рождения", true));
             this.дата_РожденияDateTimePicker.Location = new System.Drawing.Point(636, 349);
             this.дата_РожденияDateTimePicker.Name = "дата_РожденияDateTimePicker";
-            this.дата_РожденияDateTimePicker.Size = new System.Drawing.Size(200, 33);
+            this.дата_РожденияDateTimePicker.Size = new System.Drawing.Size(211, 33);
             this.дата_РожденияDateTimePicker.TabIndex = 23;
             // 
             // PasstextBox1

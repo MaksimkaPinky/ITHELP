@@ -102,6 +102,18 @@
     <Compile Include="Forms\frmListRequest.Designer.cs">
       <DependentUpon>frmListRequest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IT_Employees_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IT_Employees_Form.Designer.cs">
+      <DependentUpon>IT_Employees_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users_Form.Designer.cs">
+      <DependentUpon>Users_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportUserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -157,6 +169,12 @@
       <DependentUpon>RequestUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\DatabaseContext.cs" />
+    <EmbeddedResource Include="Forms\IT_Employees_Form.resx">
+      <DependentUpon>IT_Employees_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users_Form.resx">
+      <DependentUpon>Users_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportUserControl1.resx">
       <DependentUpon>ReportUserControl1.cs</DependentUpon>
     </EmbeddedResource>
