@@ -30,23 +30,23 @@ namespace ITHelpWinFrm.Forms
                 AUC.GenerateDataToAdminUserControl(a);
                 UserflowLayoutPanel1.Controls.Add(AUC);
 
-                AUC.Click += new System.EventHandler(this.AUC_Click);
-                AUC.DoubleClick += new System.EventHandler(this.AUC_DoubleClick);
+                //AUC.Click += new System.EventHandler(this.AUC_Click);
+                //AUC.DoubleClick += new System.EventHandler(this.AUC_DoubleClick);
             }
         }
-        private void AUC_DoubleClick(object sender, EventArgs e)
-        {
-            AdminUserControl AUC = sender as AdminUserControl;
-            selectedAdminUserControls.Add(AUC);
-            Reg_Form RegEditForm = new Reg_Form();
-            DialogResult dialogResult = RegEditForm.ShowDialog();
-            SortListView();
-        }
-        private void AUC_Click(object sender, EventArgs e)
-        {
-            AdminUserControl AUC = sender as AdminUserControl;
+        //private void AUC_DoubleClick(object sender, EventArgs e)
+        //{
+        //    AdminUserControl AUC = sender as AdminUserControl;
+        //    selectedAdminUserControls.Add(AUC);
+        //    Reg_Form RegEditForm = new Reg_Form();
+        //    DialogResult dialogResult = RegEditForm.ShowDialog();
+        //    SortListView();
+        //}
+        //private void AUC_Click(object sender, EventArgs e)
+        //{
+        //    AdminUserControl AUC = sender as AdminUserControl;
 
-        }
+        //}
         private void SortListView()
         {
             var listUpdate = DatabaseContext.db.User.ToList();
@@ -128,8 +128,13 @@ namespace ITHelpWinFrm.Forms
             AdminUserControl AUC = sender as AdminUserControl;
             selectedAdminUserControls.Add(AUC);
             Reg_Form RegEditForm = new Reg_Form();
+            RegEditForm.USERS = null;
             DialogResult dialogResult = RegEditForm.ShowDialog();
-            SortListView();
+            if(dialogResult==DialogResult.OK)
+            {
+                SortListView();
+
+            }
         }
     }
 }

@@ -42,7 +42,7 @@ namespace ITHelpWinFrm
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reg_Form));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LAB_Reg = new System.Windows.Forms.Label();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.логинTextBox = new System.Windows.Forms.TextBox();
             this.парольTextBox = new System.Windows.Forms.TextBox();
@@ -160,7 +160,7 @@ namespace ITHelpWinFrm
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.LAB_Reg);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(20, 23, 20, 23);
@@ -179,18 +179,18 @@ namespace ITHelpWinFrm
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // label3
+            // LAB_Reg
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label3.Location = new System.Drawing.Point(437, 32);
-            this.label3.Margin = new System.Windows.Forms.Padding(11, 0, 11, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Регистрация";
+            this.LAB_Reg.AutoSize = true;
+            this.LAB_Reg.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.LAB_Reg.ForeColor = System.Drawing.Color.Black;
+            this.LAB_Reg.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.LAB_Reg.Location = new System.Drawing.Point(437, 32);
+            this.LAB_Reg.Margin = new System.Windows.Forms.Padding(11, 0, 11, 0);
+            this.LAB_Reg.Name = "LAB_Reg";
+            this.LAB_Reg.Size = new System.Drawing.Size(122, 25);
+            this.LAB_Reg.TabIndex = 0;
+            this.LAB_Reg.Text = "Регистрация";
             // 
             // userBindingSource
             // 
@@ -371,7 +371,7 @@ namespace ITHelpWinFrm
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LAB_Reg;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.TextBox логинTextBox;
         private System.Windows.Forms.TextBox парольTextBox;

@@ -14,6 +14,7 @@ namespace ITHelpWinFrm
 {
     public partial class Reg_Form : Form
     {
+        public User USERS { get; set; } = null;
         public Reg_Form()
         {
             InitializeComponent();
@@ -25,6 +26,15 @@ namespace ITHelpWinFrm
             genderBindingSource.DataSource = DatabaseContext.db.Gender.ToList();
             officeBindingSource.DataSource = DatabaseContext.db.Office.ToList();
             roleBindingSource.DataSource = DatabaseContext.db.Role.ToList();
+            if (USERS == null)
+            {
+                userBindingSource.AddNew();
+                LAB_Reg.Text = "Добавление нового пользователя";
+            }
+            else
+            {
+
+            }
         }
 
         private void Closebut_Click(object sender, EventArgs e)
@@ -33,50 +43,56 @@ namespace ITHelpWinFrm
             this.Close();
             FRMAdm.Show();
         }
-
+        //Добавление нового пользователя
         private void Regbut_Click(object sender, EventArgs e)
         {
-            int id_Office;
-            bool bid_Office = int.TryParse(iD_OfficeComboBox.Text, out id_Office);
-            if (bid_Office == false)
+            //int id_Office;
+            //bool bid_Office = int.TryParse(iD_OfficeComboBox.Text, out id_Office);
+            //if (bid_Office == false)
+            //{
+            //    MessageBox.Show("Неверный формат ID"+iD_OfficeComboBox);
+            //    return;
+            //}
+            //int gender;
+            //bool bgen = int.TryParse(iD_OfficeComboBox.Text, out gender);
+            //if (bgen == false)
+            //{
+            //    MessageBox.Show("Неверный формат ID" + iD_GenderComboBox);
+            //    return;
+            //}
+            //int role;
+            //bool brole = int.TryParse(iD_OfficeComboBox.Text, out role);
+            //if (brole == false)
+            //{
+            //    MessageBox.Show("Неверный формат ID" + рольComboBox);
+            //    return;
+            //}
+            //User usr = new User();
+            //usr.Логин = логинTextBox.Text;
+            //usr.Пароль = парольTextBox.Text;
+            //usr.ФИО = фИОTextBox.Text;
+            //usr.Дата_Рождения = дата_РожденияDateTimePicker.ToString();
+            //usr.Почта = почтаTextBox.Text;
+            //usr.ID_Gender = gender;
+            //usr.ID_Office =id_Office;
+            //usr.ID_Role = role;
+            //DatabaseContext.db.User.Add(usr);
+            if (USERS == null)
             {
-                MessageBox.Show("Неверный формат ID"+iD_OfficeComboBox);
-                return;
+                USERS = (User)userBindingSource.Current;
+                DatabaseContext.db.User.Add(USERS);
             }
-            int gender;
-            bool bgen = int.TryParse(iD_OfficeComboBox.Text, out gender);
-            if (bgen == false)
-            {
-                MessageBox.Show("Неверный формат ID" + iD_GenderComboBox);
-                return;
-            }
-            int role;
-            bool brole = int.TryParse(iD_OfficeComboBox.Text, out role);
-            if (brole == false)
-            {
-                MessageBox.Show("Неверный формат ID" + рольComboBox);
-                return;
-            }
-            User usr = new User();
-            usr.Логин = логинTextBox.Text;
-            usr.Пароль = парольTextBox.Text;
-            usr.ФИО = фИОTextBox.Text;
-            usr.Дата_Рождения = дата_РожденияDateTimePicker.ToString();
-            usr.Почта = почтаTextBox.Text;
-            usr.ID_Gender = gender;
-            usr.ID_Office =id_Office;
-            usr.ID_Role = role;
-            DatabaseContext.db.User.Add(usr);
             try
             {
                 DatabaseContext.db.SaveChanges();
                 MessageBox.Show("Информация сохранена");
+                DialogResult = DialogResult.OK;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
-            this.Close();
+            //this.Close();
         }
     }
 }

@@ -114,10 +114,10 @@
     <Compile Include="Forms\Users_Form.Designer.cs">
       <DependentUpon>Users_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportUserControl1.cs">
+    <Compile Include="UserControl\ReportUserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ReportUserControl1.Designer.cs">
+    <Compile Include="UserControl\ReportUserControl1.Designer.cs">
       <DependentUpon>ReportUserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\EMPUserControl.cs">
@@ -175,7 +175,7 @@
     <EmbeddedResource Include="Forms\Users_Form.resx">
       <DependentUpon>Users_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportUserControl1.resx">
+    <EmbeddedResource Include="UserControl\ReportUserControl1.resx">
       <DependentUpon>ReportUserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\EMPUserControl.resx">
