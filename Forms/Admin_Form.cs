@@ -31,7 +31,7 @@ namespace ITHelpWinFrm
             PanNav.Left = ListRequestbut.Left;
 
             //Показ данных формы через панель
-            lblTitle.Text = "Список пользователей";
+            lblTitle.Text = "Список заявок";
             this.PanformLoader.Controls.Clear();
             frmListRequest frmListRequest_VRB = new frmListRequest() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frmListRequest_VRB.FormBorderStyle = FormBorderStyle.None;

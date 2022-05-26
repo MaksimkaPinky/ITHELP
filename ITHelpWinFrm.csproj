@@ -78,6 +78,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\EddDelUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EddDelUserForm.Designer.cs">
+      <DependentUpon>EddDelUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmListEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
       <DependentUpon>RequestUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\DatabaseContext.cs" />
+    <EmbeddedResource Include="Forms\EddDelUserForm.resx">
+      <DependentUpon>EddDelUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\IT_Employees_Form.resx">
       <DependentUpon>IT_Employees_Form.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ITHelpWinFrm.EF;
+using ITHelpWinFrm.Forms;
 
 namespace ITHelpWinFrm
 {
@@ -68,6 +69,18 @@ namespace ITHelpWinFrm
                 {
                     Admin_Form FRMAdm = new Admin_Form();
                     FRMAdm.Show();
+                    this.Hide();
+                }
+                else if (USER.Role.Роль == "Сотрудник ИТ-отдела")
+                {
+                    IT_Employees_Form ITEMP = new IT_Employees_Form();
+                    ITEMP.Show();
+                    this.Hide();
+                }
+                else if (USER.Role.Роль == "Пользователь")
+                {
+                    Users_Form USEFRM = new Users_Form();
+                    USEFRM.Show();
                     this.Hide();
                 }
                 else

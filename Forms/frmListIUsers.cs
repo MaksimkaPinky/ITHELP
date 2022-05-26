@@ -31,17 +31,20 @@ namespace ITHelpWinFrm.Forms
                 UserflowLayoutPanel1.Controls.Add(AUC);
 
                 //AUC.Click += new System.EventHandler(this.AUC_Click);
-                //AUC.DoubleClick += new System.EventHandler(this.AUC_DoubleClick);
+                AUC.DoubleClick += new System.EventHandler(this.AUC_DoubleClick);
             }
         }
-        //private void AUC_DoubleClick(object sender, EventArgs e)
-        //{
-        //    AdminUserControl AUC = sender as AdminUserControl;
-        //    selectedAdminUserControls.Add(AUC);
-        //    Reg_Form RegEditForm = new Reg_Form();
-        //    DialogResult dialogResult = RegEditForm.ShowDialog();
-        //    SortListView();
-        //}
+        private void AUC_DoubleClick(object sender, EventArgs e)
+        {
+            EddDelUserForm EDDDEL = new EddDelUserForm();
+            EDDDEL.Show();
+            this.Hide();
+            //AdminUserControl AUC = sender as AdminUserControl;
+            //selectedAdminUserControls.Add(AUC);
+            //Reg_Form RegEditForm = new Reg_Form();
+            //DialogResult dialogResult = RegEditForm.ShowDialog();
+            //SortListView();
+        }
         //private void AUC_Click(object sender, EventArgs e)
         //{
         //    AdminUserControl AUC = sender as AdminUserControl;
@@ -61,7 +64,7 @@ namespace ITHelpWinFrm.Forms
                     .Contains(SearchTB.Text.ToLower())).ToList();
             }
 
-            // Sort
+            // Сортировка
             if (SortCB.Text == "ФИО")
             {
                 if (!descCB.Checked)
@@ -127,14 +130,17 @@ namespace ITHelpWinFrm.Forms
         {
             AdminUserControl AUC = sender as AdminUserControl;
             selectedAdminUserControls.Add(AUC);
-            Reg_Form RegEditForm = new Reg_Form();
-            RegEditForm.USERS = null;
-            DialogResult dialogResult = RegEditForm.ShowDialog();
-            if(dialogResult==DialogResult.OK)
-            {
-                SortListView();
 
-            }
+            Reg_Form RegEditForm = new Reg_Form();
+            RegEditForm.ShowDialog();
+            this.Hide();
+            //RegEditForm.USERS = null;
+            //DialogResult dialogResult = RegEditForm.ShowDialog();
+            //if(dialogResult==DialogResult.OK)
+            //{
+            //    SortListView();
+
+            //}
         }
     }
 }

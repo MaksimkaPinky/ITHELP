@@ -101,6 +101,7 @@ namespace ITHelpWinFrm.Forms
             this.AddEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AddEmp.TabIndex = 23;
             this.AddEmp.TabStop = false;
+            this.AddEmp.Click += new System.EventHandler(this.AddEmp_Click);
             // 
             // Exitbut
             // 

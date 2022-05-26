@@ -21,5 +21,10 @@ namespace ITHelpWinFrm.Forms
         {
             Application.Exit();
         }
+
+        private void AddEmp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

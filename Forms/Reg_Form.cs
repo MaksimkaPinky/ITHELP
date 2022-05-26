@@ -14,7 +14,7 @@ namespace ITHelpWinFrm
 {
     public partial class Reg_Form : Form
     {
-        public User USERS { get; set; } = null;
+        //public User USERS { get; set; } = null;
         public Reg_Form()
         {
             InitializeComponent();
@@ -26,15 +26,15 @@ namespace ITHelpWinFrm
             genderBindingSource.DataSource = DatabaseContext.db.Gender.ToList();
             officeBindingSource.DataSource = DatabaseContext.db.Office.ToList();
             roleBindingSource.DataSource = DatabaseContext.db.Role.ToList();
-            if (USERS == null)
-            {
-                userBindingSource.AddNew();
-                LAB_Reg.Text = "Добавление нового пользователя";
-            }
-            else
-            {
+            //if (USERS == null)
+            //{
+            //    userBindingSource.AddNew();
+            //    LAB_Reg.Text = "Добавление нового пользователя";
+            //}
+            //else
+            //{
 
-            }
+            //}
         }
 
         private void Closebut_Click(object sender, EventArgs e)
@@ -46,6 +46,28 @@ namespace ITHelpWinFrm
         //Добавление нового пользователя
         private void Regbut_Click(object sender, EventArgs e)
         {
+            User USR = new User();
+            USR.Логин = логинTextBox.Text;
+
+            //User provUser = DatabaseContext.db.User.Find(логинTextBox.Text);
+            //if (DatabaseContext.db.User.Find(логинTextBox.Text) != null)
+            //{
+            //    MessageBox.Show ("Данный логин занят");
+            //    return;
+            //}
+            int idOff, idRole, idGen;
+            bool bid_Office = int.TryParse(iD_OfficeComboBox.Text, out idOff),
+            bidRole = int.TryParse(рольComboBox.Text, out idRole),
+            bidGen = int.TryParse(iD_GenderComboBox.Text, out idGen);
+            USR.Пароль = парольTextBox.Text;
+            USR.Почта = почтаTextBox.Text;
+            USR.ФИО = фИОTextBox.Text;
+            USR.Дата_Рождения = дата_РожденияDateTimePicker.ToString();
+            USR.ID_Office = idOff;
+            USR.ID_Role = idRole;
+            USR.ID_Gender = idGen;
+            DatabaseContext.db.User.Add(USR);
+
             //int id_Office;
             //bool bid_Office = int.TryParse(iD_OfficeComboBox.Text, out id_Office);
             //if (bid_Office == false)
@@ -77,22 +99,23 @@ namespace ITHelpWinFrm
             //usr.ID_Office =id_Office;
             //usr.ID_Role = role;
             //DatabaseContext.db.User.Add(usr);
-            if (USERS == null)
-            {
-                USERS = (User)userBindingSource.Current;
-                DatabaseContext.db.User.Add(USERS);
-            }
+
+
+            //    if (USERS == null)
+            //    {
+            //        USERS = (User)userBindingSource.Current;
+            //        DatabaseContext.db.User.Add(USERS);
+            //    }
             try
             {
                 DatabaseContext.db.SaveChanges();
-                MessageBox.Show("Информация сохранена");
-                DialogResult = DialogResult.OK;
+                MessageBox.Show("Пользователь зарегистрирован");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
-            //this.Close();
+            //    this.Close();
         }
     }
 }
