@@ -78,6 +78,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EF\Criticality.cs" />
+    <Compile Include="EF\EmpPost.cs" />
+    <Compile Include="EF\Gender.cs" />
+    <Compile Include="EF\Hardware.cs" />
+    <Compile Include="EF\IT_Employees.cs" />
+    <Compile Include="EF\Model1.cs" />
+    <Compile Include="EF\Office.cs" />
+    <Compile Include="EF\Quest.cs" />
+    <Compile Include="EF\Repair.cs" />
+    <Compile Include="EF\Report.cs" />
+    <Compile Include="EF\Role.cs" />
+    <Compile Include="EF\sysdiagrams.cs" />
+    <Compile Include="EF\TypeOfProblem.cs" />
+    <Compile Include="EF\User.cs" />
     <Compile Include="Forms\EddDelUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,16 +164,6 @@
     <Compile Include="Forms\Aut_Form.Designer.cs">
       <DependentUpon>Aut_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="EF\Criticality.cs" />
-    <Compile Include="EF\Gender.cs" />
-    <Compile Include="EF\Hardware.cs" />
-    <Compile Include="EF\IT_Employees.cs" />
-    <Compile Include="EF\Model1.cs" />
-    <Compile Include="EF\Office.cs" />
-    <Compile Include="EF\Quest.cs" />
-    <Compile Include="EF\Role.cs" />
-    <Compile Include="EF\TypeOfProblem.cs" />
-    <Compile Include="EF\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\Reg_Form.cs">
@@ -228,10 +232,15 @@
       <DependentUpon>RequestUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ITHelpWinFrm.EF.Criticality.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Gender.datasource" />
+    <None Include="Properties\DataSources\ITHelpWinFrm.EF.Hardware.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.IT_Employees.datasource" />
+    <None Include="Properties\DataSources\ITHelpWinFrm.EF.Model1.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Office.datasource" />
+    <None Include="Properties\DataSources\ITHelpWinFrm.EF.Quest.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Role.datasource" />
+    <None Include="Properties\DataSources\ITHelpWinFrm.EF.TypeOfProblem.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

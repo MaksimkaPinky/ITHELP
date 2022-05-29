@@ -33,19 +33,23 @@ namespace ITHelpWinFrm.Forms
             this.AddUsers = new System.Windows.Forms.PictureBox();
             this.UserflowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.adminUserControl2 = new ITHelpWinFrm.AdminUserControl();
-            this.SortCB = new System.Windows.Forms.ComboBox();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SearchTB = new System.Windows.Forms.TextBox();
             this.descCB = new System.Windows.Forms.CheckBox();
+            this.SortCB = new System.Windows.Forms.ComboBox();
+            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Passlabel = new System.Windows.Forms.Label();
             this.Loginlabel = new System.Windows.Forms.Label();
             this.Emaillabel = new System.Windows.Forms.Label();
             this.Birthday_label = new System.Windows.Forms.Label();
+            this.labelPatronymic = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.LFPlabel = new System.Windows.Forms.Label();
             this.ID_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AddUsers)).BeginInit();
             this.UserflowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // AddUsers
@@ -61,6 +65,7 @@ namespace ITHelpWinFrm.Forms
             // 
             // UserflowLayoutPanel1
             // 
+            this.UserflowLayoutPanel1.AutoScroll = true;
             this.UserflowLayoutPanel1.Controls.Add(this.adminUserControl2);
             this.UserflowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.UserflowLayoutPanel1.Location = new System.Drawing.Point(0, 96);
@@ -78,24 +83,6 @@ namespace ITHelpWinFrm.Forms
             this.adminUserControl2.Name = "adminUserControl2";
             this.adminUserControl2.Size = new System.Drawing.Size(8, 8);
             this.adminUserControl2.TabIndex = 1;
-            // 
-            // SortCB
-            // 
-            this.SortCB.AllowDrop = true;
-            this.SortCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.userBindingSource, "ID_User", true));
-            this.SortCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userBindingSource, "ID_User", true));
-            this.SortCB.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.userBindingSource, "ID_User", true));
-            this.SortCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "ФИО", true));
-            this.SortCB.DataSource = this.userBindingSource;
-            this.SortCB.DisplayMember = "ФИО";
-            this.SortCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SortCB.FormattingEnabled = true;
-            this.SortCB.Location = new System.Drawing.Point(430, 12);
-            this.SortCB.Name = "SortCB";
-            this.SortCB.Size = new System.Drawing.Size(176, 33);
-            this.SortCB.TabIndex = 19;
-            this.SortCB.ValueMember = "ID_User";
-            this.SortCB.SelectedIndexChanged += new System.EventHandler(this.SortCB_SelectedIndexChanged);
             // 
             // userBindingSource
             // 
@@ -119,15 +106,32 @@ namespace ITHelpWinFrm.Forms
             this.descCB.UseVisualStyleBackColor = true;
             this.descCB.CheckedChanged += new System.EventHandler(this.descCB_CheckedChanged);
             // 
+            // SortCB
+            // 
+            this.SortCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roleBindingSource, "Роль", true));
+            this.SortCB.DataSource = this.userBindingSource;
+            this.SortCB.DisplayMember = "Role";
+            this.SortCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SortCB.FormattingEnabled = true;
+            this.SortCB.Location = new System.Drawing.Point(436, 12);
+            this.SortCB.Name = "SortCB";
+            this.SortCB.Size = new System.Drawing.Size(147, 33);
+            this.SortCB.TabIndex = 28;
+            this.SortCB.ValueMember = "ID_User";
+            // 
+            // roleBindingSource
+            // 
+            this.roleBindingSource.DataSource = typeof(ITHelpWinFrm.EF.Role);
+            // 
             // Passlabel
             // 
             this.Passlabel.AutoSize = true;
             this.Passlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.Passlabel.ForeColor = System.Drawing.Color.White;
-            this.Passlabel.Location = new System.Drawing.Point(725, 70);
+            this.Passlabel.Location = new System.Drawing.Point(743, 70);
             this.Passlabel.Name = "Passlabel";
             this.Passlabel.Size = new System.Drawing.Size(71, 23);
-            this.Passlabel.TabIndex = 22;
+            this.Passlabel.TabIndex = 29;
             this.Passlabel.Text = "Пароль";
             // 
             // Loginlabel
@@ -135,10 +139,10 @@ namespace ITHelpWinFrm.Forms
             this.Loginlabel.AutoSize = true;
             this.Loginlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.Loginlabel.ForeColor = System.Drawing.Color.White;
-            this.Loginlabel.Location = new System.Drawing.Point(602, 70);
+            this.Loginlabel.Location = new System.Drawing.Point(637, 70);
             this.Loginlabel.Name = "Loginlabel";
             this.Loginlabel.Size = new System.Drawing.Size(59, 23);
-            this.Loginlabel.TabIndex = 23;
+            this.Loginlabel.TabIndex = 30;
             this.Loginlabel.Text = "Логин";
             // 
             // Emaillabel
@@ -146,10 +150,10 @@ namespace ITHelpWinFrm.Forms
             this.Emaillabel.AutoSize = true;
             this.Emaillabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.Emaillabel.ForeColor = System.Drawing.Color.White;
-            this.Emaillabel.Location = new System.Drawing.Point(469, 70);
+            this.Emaillabel.Location = new System.Drawing.Point(509, 70);
             this.Emaillabel.Name = "Emaillabel";
             this.Emaillabel.Size = new System.Drawing.Size(59, 23);
-            this.Emaillabel.TabIndex = 24;
+            this.Emaillabel.TabIndex = 31;
             this.Emaillabel.Text = "Почта";
             // 
             // Birthday_label
@@ -157,22 +161,44 @@ namespace ITHelpWinFrm.Forms
             this.Birthday_label.AutoSize = true;
             this.Birthday_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.Birthday_label.ForeColor = System.Drawing.Color.White;
-            this.Birthday_label.Location = new System.Drawing.Point(289, 70);
+            this.Birthday_label.Location = new System.Drawing.Point(326, 70);
             this.Birthday_label.Name = "Birthday_label";
             this.Birthday_label.Size = new System.Drawing.Size(135, 23);
-            this.Birthday_label.TabIndex = 25;
+            this.Birthday_label.TabIndex = 32;
             this.Birthday_label.Text = "День Рождения";
+            // 
+            // labelPatronymic
+            // 
+            this.labelPatronymic.AutoSize = true;
+            this.labelPatronymic.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.labelPatronymic.ForeColor = System.Drawing.Color.White;
+            this.labelPatronymic.Location = new System.Drawing.Point(206, 70);
+            this.labelPatronymic.Name = "labelPatronymic";
+            this.labelPatronymic.Size = new System.Drawing.Size(83, 23);
+            this.labelPatronymic.TabIndex = 33;
+            this.labelPatronymic.Text = "Отчество";
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.labelName.ForeColor = System.Drawing.Color.White;
+            this.labelName.Location = new System.Drawing.Point(145, 70);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(45, 23);
+            this.labelName.TabIndex = 34;
+            this.labelName.Text = "Имя";
             // 
             // LFPlabel
             // 
             this.LFPlabel.AutoSize = true;
             this.LFPlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.LFPlabel.ForeColor = System.Drawing.Color.White;
-            this.LFPlabel.Location = new System.Drawing.Point(76, 70);
+            this.LFPlabel.Location = new System.Drawing.Point(41, 70);
             this.LFPlabel.Name = "LFPlabel";
-            this.LFPlabel.Size = new System.Drawing.Size(49, 23);
-            this.LFPlabel.TabIndex = 26;
-            this.LFPlabel.Text = "ФИО";
+            this.LFPlabel.Size = new System.Drawing.Size(84, 23);
+            this.LFPlabel.TabIndex = 35;
+            this.LFPlabel.Text = "Фамилия";
             // 
             // ID_label
             // 
@@ -182,7 +208,7 @@ namespace ITHelpWinFrm.Forms
             this.ID_label.Location = new System.Drawing.Point(8, 70);
             this.ID_label.Name = "ID_label";
             this.ID_label.Size = new System.Drawing.Size(27, 23);
-            this.ID_label.TabIndex = 27;
+            this.ID_label.TabIndex = 36;
             this.ID_label.Text = "ID";
             // 
             // frmListIUsers
@@ -194,11 +220,13 @@ namespace ITHelpWinFrm.Forms
             this.Controls.Add(this.Loginlabel);
             this.Controls.Add(this.Emaillabel);
             this.Controls.Add(this.Birthday_label);
+            this.Controls.Add(this.labelPatronymic);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.LFPlabel);
             this.Controls.Add(this.ID_label);
+            this.Controls.Add(this.SortCB);
             this.Controls.Add(this.descCB);
             this.Controls.Add(this.SearchTB);
-            this.Controls.Add(this.SortCB);
             this.Controls.Add(this.AddUsers);
             this.Controls.Add(this.UserflowLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F);
@@ -209,6 +237,7 @@ namespace ITHelpWinFrm.Forms
             ((System.ComponentModel.ISupportInitialize)(this.AddUsers)).EndInit();
             this.UserflowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,14 +248,17 @@ namespace ITHelpWinFrm.Forms
         private System.Windows.Forms.PictureBox AddUsers;
         private System.Windows.Forms.FlowLayoutPanel UserflowLayoutPanel1;
         private AdminUserControl adminUserControl2;
-        private System.Windows.Forms.ComboBox SortCB;
         private System.Windows.Forms.TextBox SearchTB;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.CheckBox descCB;
+        private System.Windows.Forms.ComboBox SortCB;
+        private System.Windows.Forms.BindingSource roleBindingSource;
         private System.Windows.Forms.Label Passlabel;
         private System.Windows.Forms.Label Loginlabel;
         private System.Windows.Forms.Label Emaillabel;
         private System.Windows.Forms.Label Birthday_label;
+        private System.Windows.Forms.Label labelPatronymic;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label LFPlabel;
         private System.Windows.Forms.Label ID_label;
     }

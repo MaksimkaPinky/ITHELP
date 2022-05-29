@@ -16,7 +16,6 @@ namespace ITHelpWinFrm.EF
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID_TypeOfProblem { get; set; }
 
         [StringLength(50)]

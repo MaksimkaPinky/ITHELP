@@ -64,6 +64,7 @@ namespace ITHelpWinFrm.Forms
             // 
             // EMPflowLayoutPanel1
             // 
+            this.EMPflowLayoutPanel1.AutoScroll = true;
             this.EMPflowLayoutPanel1.Controls.Add(this.adminUserControl2);
             this.EMPflowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.EMPflowLayoutPanel1.Location = new System.Drawing.Point(0, 96);

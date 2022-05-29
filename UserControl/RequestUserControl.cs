@@ -21,7 +21,7 @@ namespace ITHelpWinFrm
         {
             ReqIDlabel.Text = REQ.ID_Quest.ToString();
             PriorityLabel.Text = REQ.Приоритет.ToString();
-            ReqFillabel.Text = REQ.Филиал;
+            ReqFillabel.Text = REQ.НомерКабинета.ToString();
             ReqSroklabel.Text = REQ.СрочностьВыполнения.ToString();
         }
     }

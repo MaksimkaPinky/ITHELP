@@ -9,8 +9,13 @@ namespace ITHelpWinFrm.EF
     [Table("Quest")]
     public partial class Quest
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Quest()
+        {
+            Report = new HashSet<Report>();
+        }
+
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID_Quest { get; set; }
 
         public int? ID_User { get; set; }
@@ -21,8 +26,7 @@ namespace ITHelpWinFrm.EF
 
         public int? ID_TypeOfProblem { get; set; }
 
-        [StringLength(50)]
-        public string Филиал { get; set; }
+        public int? ID_Office { get; set; }
 
         public int? ID_Hardware { get; set; }
 
@@ -45,6 +49,9 @@ namespace ITHelpWinFrm.EF
         public virtual Criticality Criticality { get; set; }
 
         public virtual Hardware Hardware { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Report> Report { get; set; }
 
         public virtual TypeOfProblem TypeOfProblem { get; set; }
     }

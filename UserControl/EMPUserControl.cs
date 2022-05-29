@@ -20,8 +20,10 @@ namespace ITHelpWinFrm
         public void GenerateDataToEMPUserControl(IT_Employees EMP)
         {
             ID_Label.Text = EMP.ID_IT_Employees.ToString();
-            FIOlabel.Text = EMP.ФИО;
-            PostLabel.Text = EMP.Должность;
+            FIOlabel.Text = EMP.Фамилия;
+            labelName.Text = EMP.Имя;
+            labelPatronymic.Text = EMP.Отчество;
+            PostLab.Text = Convert.ToString(EMP.ID_IT_Employees);
         }
 
             private void EMPUserControl_Load(object sender, EventArgs e)

@@ -8,23 +8,18 @@ namespace ITHelpWinFrm.EF
 
     public partial class IT_Employees
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public IT_Employees()
-        {
-            Hardware = new HashSet<Hardware>();
-        }
-
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID_IT_Employees { get; set; }
 
         [StringLength(50)]
-        public string ФИО { get; set; }
+        public string Фамилия { get; set; }
 
         [StringLength(50)]
-        public string Должность { get; set; }
+        public string Имя { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Hardware> Hardware { get; set; }
+        [StringLength(50)]
+        public string Отчество { get; set; }
+
+        public int ID_Emp_Post { get; set; }
     }
 }

@@ -16,10 +16,12 @@ namespace ITHelpWinFrm.EF
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID_Criticality { get; set; }
 
-        public int? СтепеньКритичности { get; set; }
+        public int СтепеньКритичности { get; set; }
+
+        [StringLength(50)]
+        public string Описание { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Quest> Quest { get; set; }

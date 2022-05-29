@@ -13,7 +13,13 @@ namespace ITHelpWinFrm.EF
         public int ID_User { get; set; }
 
         [StringLength(50)]
-        public string ФИО { get; set; }
+        public string Фамилия { get; set; }
+
+        [StringLength(50)]
+        public string Имя { get; set; }
+
+        [StringLength(50)]
+        public string Отчество { get; set; }
 
         public int ID_Office { get; set; }
 

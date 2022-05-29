@@ -16,27 +16,22 @@ namespace ITHelpWinFrm.EF
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID_Hardware { get; set; }
 
+        [Required]
+        [StringLength(150)]
+        public string Наименование { get; set; }
+
         [Column(TypeName = "date")]
-        public DateTime? ДатаУстановки { get; set; }
+        public DateTime ДатаУстановки { get; set; }
 
-        public int? ID_IT_Employees { get; set; }
+        public int ID_IT_Employees { get; set; }
 
-        [StringLength(10)]
-        public string КоличествоРемонтов { get; set; }
+        public int ID_Repair { get; set; }
 
-        [StringLength(10)]
-        public string ПричинаРемонта { get; set; }
-
-        [StringLength(10)]
+        [Required]
+        [StringLength(50)]
         public string ДатаПоследнегоРемонта { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime? ДатаОбследования { get; set; }
-
-        public virtual IT_Employees IT_Employees { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Quest> Quest { get; set; }

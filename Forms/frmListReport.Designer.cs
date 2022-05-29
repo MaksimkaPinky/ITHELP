@@ -69,6 +69,7 @@ namespace ITHelpWinFrm.Forms
             // 
             // ReportflowLayoutPanel1
             // 
+            this.ReportflowLayoutPanel1.AutoScroll = true;
             this.ReportflowLayoutPanel1.Controls.Add(this.adminUserControl2);
             this.ReportflowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ReportflowLayoutPanel1.Location = new System.Drawing.Point(0, 51);

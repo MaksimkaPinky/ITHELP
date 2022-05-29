@@ -20,39 +20,14 @@ namespace ITHelpWinFrm
         public void GenerateDataToAdminUserControl(User user)
         {
             ID_label.Text = user.ID_User.ToString();
-            LFPlabel.Text = user.ФИО;
+            LFPlabel.Text = user.Фамилия;
+            labelName.Text = user.Имя;
+            labelPatronymic.Text = user.Отчество;
             Birthday_label.Text = user.Дата_Рождения;
             Emaillabel.Text = user.Почта;
             Loginlabel.Text = user.Логин;
             Passlabel.Text = user.Пароль;
         }
-
-        //int id;
-        //public int ID
-        //{ set { id = value; } }
-        //public string IDL
-        //{ set { ID_label.Text = value; } }
-        //public string ФИО
-        //{
-        //    set { LFPlabel.Text = value.ToString(); }
-        //}
-        //public string ДатаРождения
-        //{
-        //    set { Birthday_label.Text = value.ToString(); }
-        //}
-        //public string Почта
-        //{
-        //    set { Emaillabel.Text = value.ToString(); }
-        //}
-        //public string Логин
-        //{
-        //    set { Loginlabel.Text = value.ToString(); } 
-        //}
-        //public string Пароль
-        //{ 
-        //    set { Passlabel.Text = value.ToString(); }
-        //}
-
         private void label1_Click(object sender, EventArgs e)
         {
 

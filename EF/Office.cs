@@ -19,12 +19,8 @@ namespace ITHelpWinFrm.EF
         public int ID_Office { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(150)]
         public string Адрес { get; set; }
-
-        [Column("Название отдела")]
-        [StringLength(50)]
-        public string Название_отдела { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User> User { get; set; }

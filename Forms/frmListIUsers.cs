@@ -24,6 +24,7 @@ namespace ITHelpWinFrm.Forms
 
         private void GenerateAdminUserControlList(List<User> users)
         {
+            UserflowLayoutPanel1.Controls.Clear();
             foreach (var a in users)
             {
                 AdminUserControl AUC = new AdminUserControl();
@@ -45,11 +46,6 @@ namespace ITHelpWinFrm.Forms
             //DialogResult dialogResult = RegEditForm.ShowDialog();
             //SortListView();
         }
-        //private void AUC_Click(object sender, EventArgs e)
-        //{
-        //    AdminUserControl AUC = sender as AdminUserControl;
-
-        //}
         private void SortListView()
         {
             var listUpdate = DatabaseContext.db.User.ToList();
@@ -57,7 +53,7 @@ namespace ITHelpWinFrm.Forms
             if (SearchTB.Text != "Введите для поиска" && !string.IsNullOrWhiteSpace(SearchTB.Text))
             {
                 listUpdate = listUpdate
-                    .Where(x => x.ФИО.ToLower()
+                    .Where(x => x.Фамилия.ToLower()
                     .Contains(SearchTB.Text
                     .ToLower()) || x.Логин
                     .Contains(SearchTB.Text) || x.Почта.ToLower()
@@ -65,28 +61,28 @@ namespace ITHelpWinFrm.Forms
             }
 
             // Сортировка
-            if (SortCB.Text == "ФИО")
-            {
-                if (!descCB.Checked)
-                {
-                    listUpdate = listUpdate.OrderBy(x => x.ФИО).ToList();
-                }
-                else
-                {
-                    listUpdate = listUpdate.OrderByDescending(x => x.ФИО).ToList();
-                }
-            }
-            if (SortCB.Text == "Дата рождения")
-            {
-                if (!descCB.Checked)
-                {
-                    listUpdate = listUpdate.OrderBy(x => x.Дата_Рождения).ToList();
-                }
-                else
-                {
-                    listUpdate = listUpdate.OrderByDescending(x => x.Дата_Рождения).ToList();
-                }
-            }
+            //if (SortCB.Text == "ФИО")
+            //{
+            //    if (!descCB.Checked)
+            //    {
+            //        listUpdate = listUpdate.OrderBy(x => x.Фамилия).ToList();
+            //    }
+            //    else
+            //    {
+            //        listUpdate = listUpdate.OrderByDescending(x => x.Фамилия).ToList();
+            //    }
+            //}
+            //if (SortCB.Text == "Дата рождения")
+            //{
+            //    if (!descCB.Checked)
+            //    {
+            //        listUpdate = listUpdate.OrderBy(x => x.Дата_Рождения).ToList();
+            //    }
+            //    else
+            //    {
+            //        listUpdate = listUpdate.OrderByDescending(x => x.Дата_Рождения).ToList();
+            //    }
+            //}
             UserflowLayoutPanel1.Controls.Clear();
             GenerateAdminUserControlList(listUpdate);
         }
@@ -121,26 +117,18 @@ namespace ITHelpWinFrm.Forms
         private void frmListIUsers_Load(object sender, EventArgs e)
         {
             userBindingSource.DataSource = DatabaseContext.db.User.ToList();
-            var allType = DatabaseContext.db.User.Select(type => type.ФИО).ToList();
+            var allType = DatabaseContext.db.User.Select(type => type.Role.Роль).ToList();
             allType.Insert(0, "Все типы");
-            SortCB.SelectedIndex = 0;
+            //SortCB.SelectedIndex = 0;
         }
 
         private void AddUsers_Click(object sender, EventArgs e)
         {
-            AdminUserControl AUC = sender as AdminUserControl;
-            selectedAdminUserControls.Add(AUC);
+            //AdminUserControl AUC = sender as AdminUserControl;
+            //selectedAdminUserControls.Add(AUC);
 
             Reg_Form RegEditForm = new Reg_Form();
             RegEditForm.ShowDialog();
-            this.Hide();
-            //RegEditForm.USERS = null;
-            //DialogResult dialogResult = RegEditForm.ShowDialog();
-            //if(dialogResult==DialogResult.OK)
-            //{
-            //    SortListView();
-
-            //}
         }
     }
 }

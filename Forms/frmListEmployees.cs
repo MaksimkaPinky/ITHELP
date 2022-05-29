@@ -16,6 +16,7 @@ namespace ITHelpWinFrm.Forms
     {
         public List<IT_Employees> EMP = new List<IT_Employees>(DatabaseContext.db.IT_Employees);
         public static List<EMPUserControl> selectedEMPUserControls = new List<EMPUserControl>();
+        public List<EmpPost> empp = new List<EmpPost>(DatabaseContext.db.EmpPost);
         public frmListEmployees()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace ITHelpWinFrm.Forms
         }
         private void GenerateEMPUserControlList(List<IT_Employees> EMP)
         {
-            foreach (var a in EMP)
+            foreach (var a in EMP )
             {
                 EMPUserControl EMPUC = new EMPUserControl();
                 EMPUC.GenerateDataToEMPUserControl(a);
@@ -53,7 +54,7 @@ namespace ITHelpWinFrm.Forms
             if (FiltrCB.SelectedIndex > 0)
             {
                 listUpdate = listUpdate
-                    .Where(type => type.Должность == FiltrCB.SelectedItem
+                    .Where(type => type.Фамилия == FiltrCB.SelectedItem
                     .ToString())
                     .ToList();
             }
@@ -61,10 +62,10 @@ namespace ITHelpWinFrm.Forms
             if (SearchTB.Text != "Введите для поиска" && !string.IsNullOrWhiteSpace(SearchTB.Text))
             {
                 listUpdate = listUpdate
-                    .Where(x => x.ФИО.ToLower()
+                    .Where(x => x.Фамилия.ToLower()
                     .Contains(SearchTB.Text
                     .ToLower()) || x.ID_IT_Employees.ToString()
-                    .Contains(SearchTB.Text) || x.Должность.ToLower()
+                    .Contains(SearchTB.Text) || x.Фамилия.ToLower()
                     .Contains(SearchTB.Text.ToLower())).ToList();
             }   
             EMPflowLayoutPanel1.Controls.Clear();
@@ -85,7 +86,7 @@ namespace ITHelpWinFrm.Forms
 
         private void frmListEmployees_Load(object sender, EventArgs e)
         {
-            var allType = DatabaseContext.db.IT_Employees.Select(type => type.Должность).ToList();
+            var allType = DatabaseContext.db.IT_Employees.Select(type => type.Фамилия).ToList();
             allType.Insert(0, "Все типы");
             FiltrCB.DataSource = allType;
             FiltrCB.SelectedIndex = 0;
