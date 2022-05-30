@@ -26,9 +26,9 @@ namespace ITHelpWinFrm
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            PanNav.Height = ListRequestbut.Height;
-            PanNav.Top = ListRequestbut.Top;
-            PanNav.Left = ListRequestbut.Left;
+            //PanNav.Height = ListRequestbut.Height;
+            //PanNav.Top = ListRequestbut.Top;
+            //PanNav.Left = ListRequestbut.Left;
 
             //Показ данных формы через панель
             lblTitle.Text = "Список заявок";
@@ -72,9 +72,9 @@ namespace ITHelpWinFrm
         private void ListRequestbut_Click(object sender, EventArgs e)
         {
             //Цвет и вспомогательная полоса для навигации при выбранной форме
-            PanNav.Height = ListRequestbut.Height;
-            PanNav.Top = ListRequestbut.Top;
-            PanNav.Left = ListRequestbut.Left;
+            //PanNav.Height = ListRequestbut.Height;
+            //PanNav.Top = ListRequestbut.Top;
+            //PanNav.Left = ListRequestbut.Left;
             ListEmployeesbut.BackColor = Color.FromArgb(3, 77, 162);
             //Показ данных формы через панель
             lblTitle.Text = "Список заявок";
@@ -83,16 +83,12 @@ namespace ITHelpWinFrm
             frmListRequest_VRB.FormBorderStyle = FormBorderStyle.None;
             this.PanformLoader.Controls.Add(frmListRequest_VRB);
             frmListRequest_VRB.Show();
-            ////Request reqfrm = new Request();
-            //FRMAdm = this;
-            //this.Hide();
-            ////reqfrm.Show();
         }
 
         private void ListEmployeesbut_Click(object sender, EventArgs e)
         {
-            PanNav.Height = ListEmployeesbut.Height;
-            PanNav.Top = ListEmployeesbut.Top;
+            //PanNav.Height = ListEmployeesbut.Height;
+            //PanNav.Top = ListEmployeesbut.Top;
             ListEmployeesbut.BackColor = Color.FromArgb(3, 77, 162);
 
             lblTitle.Text = "Список сотрудников";
@@ -105,8 +101,8 @@ namespace ITHelpWinFrm
 
         private void ListReportbut_Click(object sender, EventArgs e)
         {
-            PanNav.Height = ListReportbut.Height;
-            PanNav.Top = ListReportbut.Top;
+            //PanNav.Height = ListReportbut.Height;
+            //PanNav.Top = ListReportbut.Top;
             ListReportbut.BackColor = Color.FromArgb(3, 77, 162);
 
             lblTitle.Text = "Список отчетов";
@@ -119,8 +115,8 @@ namespace ITHelpWinFrm
 
         private void butListUsers_Click(object sender, EventArgs e)
         {
-            PanNav.Height = butListUsers.Height;
-            PanNav.Top = butListUsers.Top;
+            //PanNav.Height = butListUsers.Height;
+            //PanNav.Top = butListUsers.Top;
             butListUsers.BackColor = Color.FromArgb(3, 77, 162);
 
             lblTitle.Text = "Список пользователей";
@@ -160,6 +156,11 @@ namespace ITHelpWinFrm
         private void butClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.incom.ru"); //Ссылка на сайт агентства 
         }
     }
 }

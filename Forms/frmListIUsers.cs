@@ -60,29 +60,14 @@ namespace ITHelpWinFrm.Forms
                     .Contains(SearchTB.Text.ToLower())).ToList();
             }
 
-            // Сортировка
-            //if (SortCB.Text == "ФИО")
-            //{
-            //    if (!descCB.Checked)
-            //    {
-            //        listUpdate = listUpdate.OrderBy(x => x.Фамилия).ToList();
-            //    }
-            //    else
-            //    {
-            //        listUpdate = listUpdate.OrderByDescending(x => x.Фамилия).ToList();
-            //    }
-            //}
-            //if (SortCB.Text == "Дата рождения")
-            //{
-            //    if (!descCB.Checked)
-            //    {
-            //        listUpdate = listUpdate.OrderBy(x => x.Дата_Рождения).ToList();
-            //    }
-            //    else
-            //    {
-            //        listUpdate = listUpdate.OrderByDescending(x => x.Дата_Рождения).ToList();
-            //    }
-            //}
+            // Фильтрация
+            if (FiltrCB.SelectedIndex > 0)
+            {
+                listUpdate = listUpdate
+                    .Where(type => type.Role.Наименование == FiltrCB.SelectedItem
+                    .ToString())
+                    .ToList();
+            }
             UserflowLayoutPanel1.Controls.Clear();
             GenerateAdminUserControlList(listUpdate);
         }
@@ -117,9 +102,10 @@ namespace ITHelpWinFrm.Forms
         private void frmListIUsers_Load(object sender, EventArgs e)
         {
             userBindingSource.DataSource = DatabaseContext.db.User.ToList();
-            var allType = DatabaseContext.db.User.Select(type => type.Role.Роль).ToList();
+            roleBindingSource.DataSource = DatabaseContext.db.Role.ToList();
+            var allType = DatabaseContext.db.User.Select(type => type.Role.Наименование).ToList();
             allType.Insert(0, "Все типы");
-            //SortCB.SelectedIndex = 0;
+            FiltrCB.SelectedIndex = 0;
         }
 
         private void AddUsers_Click(object sender, EventArgs e)
@@ -129,6 +115,12 @@ namespace ITHelpWinFrm.Forms
 
             Reg_Form RegEditForm = new Reg_Form();
             RegEditForm.ShowDialog();
+        }
+
+        private void SortCB_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            UserflowLayoutPanel1.Controls.Clear();
+            SortListView();
         }
     }
 }

@@ -36,12 +36,14 @@ namespace ITHelpWinFrm.Forms
             this.adminUserControl2 = new ITHelpWinFrm.AdminUserControl();
             this.FiltrCB = new System.Windows.Forms.ComboBox();
             this.iTEmployeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.empPostBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PostLabel = new System.Windows.Forms.Label();
             this.FIOlabel = new System.Windows.Forms.Label();
             this.ID_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp)).BeginInit();
             this.EMPflowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iTEmployeesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empPostBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchTB
@@ -61,6 +63,7 @@ namespace ITHelpWinFrm.Forms
             this.AddEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AddEmp.TabIndex = 22;
             this.AddEmp.TabStop = false;
+            this.AddEmp.Click += new System.EventHandler(this.AddEmp_Click);
             // 
             // EMPflowLayoutPanel1
             // 
@@ -84,21 +87,25 @@ namespace ITHelpWinFrm.Forms
             // 
             // FiltrCB
             // 
-            this.FiltrCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.iTEmployeesBindingSource, "ID_IT_Employees", true));
-            this.FiltrCB.DataSource = this.iTEmployeesBindingSource;
-            this.FiltrCB.DisplayMember = "ФИО";
+            this.FiltrCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.empPostBindingSource, "ID_Emp_Post", true));
+            this.FiltrCB.DataSource = this.empPostBindingSource;
+            this.FiltrCB.DisplayMember = "Наименование";
             this.FiltrCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltrCB.FormattingEnabled = true;
             this.FiltrCB.Location = new System.Drawing.Point(430, 12);
             this.FiltrCB.Name = "FiltrCB";
             this.FiltrCB.Size = new System.Drawing.Size(189, 33);
             this.FiltrCB.TabIndex = 24;
-            this.FiltrCB.ValueMember = "ID_IT_Employees";
+            this.FiltrCB.ValueMember = "ID_Emp_Post";
             this.FiltrCB.SelectedIndexChanged += new System.EventHandler(this.FiltrCB_SelectedIndexChanged);
             // 
             // iTEmployeesBindingSource
             // 
             this.iTEmployeesBindingSource.DataSource = typeof(ITHelpWinFrm.EF.IT_Employees);
+            // 
+            // empPostBindingSource
+            // 
+            this.empPostBindingSource.DataSource = typeof(ITHelpWinFrm.EF.EmpPost);
             // 
             // PostLabel
             // 
@@ -150,6 +157,7 @@ namespace ITHelpWinFrm.Forms
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp)).EndInit();
             this.EMPflowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iTEmployeesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empPostBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +174,6 @@ namespace ITHelpWinFrm.Forms
         private System.Windows.Forms.Label PostLabel;
         private System.Windows.Forms.Label FIOlabel;
         private System.Windows.Forms.Label ID_Label;
+        private System.Windows.Forms.BindingSource empPostBindingSource;
     }
 }

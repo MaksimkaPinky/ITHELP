@@ -19,12 +19,26 @@ namespace ITHelpWinFrm.Forms
 
         private void CloseBut_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void AddEmp_Click(object sender, EventArgs e)
         {
+            RequestAdd_Form REQADD = new RequestAdd_Form();
+            REQADD.Show();
+            this.Hide();
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.incom.ru"); //Ссылка на сайт агентства
+        }
+
+        private void Exitbut_Click(object sender, EventArgs e)
+        {
+            Aut_Form AUTFORM = new Aut_Form();
+            this.Close();
+            AUTFORM.Show();
         }
     }
 }

@@ -23,7 +23,7 @@ namespace ITHelpWinFrm
             FIOlabel.Text = EMP.Фамилия;
             labelName.Text = EMP.Имя;
             labelPatronymic.Text = EMP.Отчество;
-            PostLab.Text = Convert.ToString(EMP.ID_IT_Employees);
+            PostLab.Text =Convert.ToString(EMP.EmpPost.Наименование);
         }
 
             private void EMPUserControl_Load(object sender, EventArgs e)

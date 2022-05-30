@@ -19,6 +19,9 @@ namespace ITHelpWinFrm.Forms
 
         private void AddReport_Click(object sender, EventArgs e)
         {
+            ReportAdd_form REPADD = new ReportAdd_form();
+            REPADD.Show();
+            this.Hide();
 
         }
     }

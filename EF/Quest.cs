@@ -18,7 +18,8 @@ namespace ITHelpWinFrm.EF
         [Key]
         public int ID_Quest { get; set; }
 
-        public int? ID_User { get; set; }
+        [StringLength(50)]
+        public string ID_User { get; set; }
 
         public int? Приоритет { get; set; }
 
@@ -46,13 +47,17 @@ namespace ITHelpWinFrm.EF
         [Column(TypeName = "date")]
         public DateTime? ДатаЗакрытия { get; set; }
 
+        public int? СтатусЗаявкиID { get; set; }
+
         public virtual Criticality Criticality { get; set; }
 
-        public virtual Hardware Hardware { get; set; }
+        public virtual Office Office { get; set; }
+
+        public virtual Status Status { get; set; }
+
+        public virtual TypeOfProblem TypeOfProblem { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Report> Report { get; set; }
-
-        public virtual TypeOfProblem TypeOfProblem { get; set; }
     }
 }

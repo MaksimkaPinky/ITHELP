@@ -89,6 +89,7 @@
     <Compile Include="EF\Repair.cs" />
     <Compile Include="EF\Report.cs" />
     <Compile Include="EF\Role.cs" />
+    <Compile Include="EF\Status.cs" />
     <Compile Include="EF\sysdiagrams.cs" />
     <Compile Include="EF\TypeOfProblem.cs" />
     <Compile Include="EF\User.cs" />
@@ -127,6 +128,18 @@
     </Compile>
     <Compile Include="Forms\IT_Employees_Form.Designer.cs">
       <DependentUpon>IT_Employees_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportAdd_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportAdd_form.Designer.cs">
+      <DependentUpon>ReportAdd_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RequestAdd_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RequestAdd_Form.Designer.cs">
+      <DependentUpon>RequestAdd_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Users_Form.cs">
       <SubType>Form</SubType>
@@ -185,6 +198,12 @@
     <EmbeddedResource Include="Forms\IT_Employees_Form.resx">
       <DependentUpon>IT_Employees_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportAdd_form.resx">
+      <DependentUpon>ReportAdd_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RequestAdd_Form.resx">
+      <DependentUpon>RequestAdd_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Users_Form.resx">
       <DependentUpon>Users_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,13 +252,17 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Criticality.datasource" />
+    <None Include="Properties\DataSources\ITHelpWinFrm.EF.EmpPost.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Gender.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Hardware.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.IT_Employees.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Model1.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Office.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Quest.datasource" />
+    <None Include="Properties\DataSources\ITHelpWinFrm.EF.Repair.datasource" />
+    <None Include="Properties\DataSources\ITHelpWinFrm.EF.Report.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Role.datasource" />
+    <None Include="Properties\DataSources\ITHelpWinFrm.EF.Status.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.TypeOfProblem.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.User.datasource" />
     <None Include="Properties\Settings.settings">

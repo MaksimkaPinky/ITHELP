@@ -17,6 +17,26 @@ namespace ITHelpWinFrm.Forms
             InitializeComponent();
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.incom.ru"); //Ссылка на сайт агентства
+        }
 
+        private void CloseBut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void AddEmp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Exitbut_Click(object sender, EventArgs e)
+        {
+            Aut_Form AUTFORM = new Aut_Form();
+            this.Close();
+            AUTFORM.Show();
+        }
     }
 }

@@ -45,11 +45,9 @@
          <TypeUISetting>
             <PropertyUISettings>
                <PropertyUISetting Name="Название_отдела">
-                  <ControlSettings>
-                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <ControlSettings><ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
                         <BindableControlInfo Name="[Нет]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />
-                     </ControlSetting>
-                  </ControlSettings>
+                     </ControlSetting></ControlSettings>
                </PropertyUISetting>
                <PropertyUISetting Name="Адрес">
                   <ControlSettings>
@@ -62,6 +60,13 @@
                   <ControlSettings>
                      <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
                         <BindableControlInfo Name="ComboBox" Type="System.Windows.Forms.ComboBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+                     </ControlSetting>
+                  </ControlSettings>
+               </PropertyUISetting>
+               <PropertyUISetting Name="User.Office">
+                  <ControlSettings>
+                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                        <BindableControlInfo Name="[Нет]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />
                      </ControlSetting>
                   </ControlSettings>
                </PropertyUISetting>
@@ -79,7 +84,14 @@
                      </ControlSetting>
                   </ControlSettings>
                </PropertyUISetting>
-               <PropertyUISetting Name="Роль">
+               <PropertyUISetting Name="Наименование">
+                  <ControlSettings>
+                     <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                        <BindableControlInfo Name="[Нет]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />
+                     </ControlSetting>
+                  </ControlSettings>
+               </PropertyUISetting>
+               <PropertyUISetting Name="User.Role">
                   <ControlSettings>
                      <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
                         <BindableControlInfo Name="[Нет]" Type="Microsoft.VSDesigner.Data.BindManager.NoneControlPlaceHolder" />

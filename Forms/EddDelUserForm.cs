@@ -41,5 +41,20 @@ namespace ITHelpWinFrm.Forms
         {
             userBindingSource.DataSource = DatabaseContext.db.User.ToList();
         }
+
+        private void CloseBut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void EditBut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.incom.ru"); //Ссылка на сайт агентства
+        }
     }
 }

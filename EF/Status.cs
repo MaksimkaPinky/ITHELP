@@ -6,20 +6,19 @@ namespace ITHelpWinFrm.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Criticality")]
-    public partial class Criticality
+    public partial class Status
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Criticality()
+        public Status()
         {
             Quest = new HashSet<Quest>();
         }
 
         [Key]
-        public int ID_Criticality { get; set; }
+        public int ID_Status { get; set; }
 
         [StringLength(50)]
-        public string Описание { get; set; }
+        public string Наименование { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Quest> Quest { get; set; }

@@ -36,7 +36,7 @@ namespace ITHelpWinFrm.Forms
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SearchTB = new System.Windows.Forms.TextBox();
             this.descCB = new System.Windows.Forms.CheckBox();
-            this.SortCB = new System.Windows.Forms.ComboBox();
+            this.FiltrCB = new System.Windows.Forms.ComboBox();
             this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Passlabel = new System.Windows.Forms.Label();
             this.Loginlabel = new System.Windows.Forms.Label();
@@ -106,18 +106,19 @@ namespace ITHelpWinFrm.Forms
             this.descCB.UseVisualStyleBackColor = true;
             this.descCB.CheckedChanged += new System.EventHandler(this.descCB_CheckedChanged);
             // 
-            // SortCB
+            // FiltrCB
             // 
-            this.SortCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roleBindingSource, "Роль", true));
-            this.SortCB.DataSource = this.userBindingSource;
-            this.SortCB.DisplayMember = "Role";
-            this.SortCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SortCB.FormattingEnabled = true;
-            this.SortCB.Location = new System.Drawing.Point(436, 12);
-            this.SortCB.Name = "SortCB";
-            this.SortCB.Size = new System.Drawing.Size(147, 33);
-            this.SortCB.TabIndex = 28;
-            this.SortCB.ValueMember = "ID_User";
+            this.FiltrCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roleBindingSource, "Наименование", true));
+            this.FiltrCB.DataSource = this.roleBindingSource;
+            this.FiltrCB.DisplayMember = "Наименование";
+            this.FiltrCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FiltrCB.FormattingEnabled = true;
+            this.FiltrCB.Location = new System.Drawing.Point(436, 12);
+            this.FiltrCB.Name = "FiltrCB";
+            this.FiltrCB.Size = new System.Drawing.Size(147, 33);
+            this.FiltrCB.TabIndex = 28;
+            this.FiltrCB.ValueMember = "ID_Role";
+            this.FiltrCB.SelectedIndexChanged += new System.EventHandler(this.SortCB_SelectedIndexChanged_1);
             // 
             // roleBindingSource
             // 
@@ -224,7 +225,7 @@ namespace ITHelpWinFrm.Forms
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.LFPlabel);
             this.Controls.Add(this.ID_label);
-            this.Controls.Add(this.SortCB);
+            this.Controls.Add(this.FiltrCB);
             this.Controls.Add(this.descCB);
             this.Controls.Add(this.SearchTB);
             this.Controls.Add(this.AddUsers);
@@ -251,7 +252,7 @@ namespace ITHelpWinFrm.Forms
         private System.Windows.Forms.TextBox SearchTB;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.CheckBox descCB;
-        private System.Windows.Forms.ComboBox SortCB;
+        private System.Windows.Forms.ComboBox FiltrCB;
         private System.Windows.Forms.BindingSource roleBindingSource;
         private System.Windows.Forms.Label Passlabel;
         private System.Windows.Forms.Label Loginlabel;

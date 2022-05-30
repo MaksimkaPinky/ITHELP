@@ -36,7 +36,7 @@ namespace ITHelpWinFrm.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.ListReportbut = new System.Windows.Forms.Button();
             this.AddEmp = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Exitbut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp)).BeginInit();
@@ -67,6 +67,7 @@ namespace ITHelpWinFrm.Forms
             this.CloseBut.TabIndex = 3;
             this.CloseBut.Text = "x";
             this.CloseBut.UseVisualStyleBackColor = true;
+            this.CloseBut.Click += new System.EventHandler(this.CloseBut_Click);
             // 
             // pictureBox2
             // 
@@ -78,6 +79,7 @@ namespace ITHelpWinFrm.Forms
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label3
             // 
@@ -116,22 +118,31 @@ namespace ITHelpWinFrm.Forms
             this.AddEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AddEmp.TabIndex = 24;
             this.AddEmp.TabStop = false;
+            this.AddEmp.Click += new System.EventHandler(this.AddEmp_Click);
             // 
-            // label1
+            // Exitbut
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(175, 253);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(462, 25);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "ДОБАВИТЬ ПАНЕЛЬ С ЗАЯВКАМИ К СОТРУДНИКУ";
+            this.Exitbut.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Exitbut.FlatAppearance.BorderSize = 0;
+            this.Exitbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exitbut.Image = global::ITHelpWinFrm.Properties.Resources.Выход;
+            this.Exitbut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Exitbut.Location = new System.Drawing.Point(0, 392);
+            this.Exitbut.Name = "Exitbut";
+            this.Exitbut.Size = new System.Drawing.Size(800, 58);
+            this.Exitbut.TabIndex = 26;
+            this.Exitbut.Text = "Выйти";
+            this.Exitbut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Exitbut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Exitbut.UseVisualStyleBackColor = true;
+            this.Exitbut.Click += new System.EventHandler(this.Exitbut_Click);
             // 
             // IT_Employees_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Exitbut);
             this.Controls.Add(this.AddEmp);
             this.Controls.Add(this.ListReportbut);
             this.Controls.Add(this.panel1);
@@ -145,7 +156,6 @@ namespace ITHelpWinFrm.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -157,6 +167,6 @@ namespace ITHelpWinFrm.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button ListReportbut;
         private System.Windows.Forms.PictureBox AddEmp;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Exitbut;
     }
 }

@@ -23,7 +23,7 @@ namespace ITHelpWinFrm
             LFPlabel.Text = user.Фамилия;
             labelName.Text = user.Имя;
             labelPatronymic.Text = user.Отчество;
-            Birthday_label.Text = user.Дата_Рождения;
+            Birthday_label.Text = user.Дата_Рождения.ToString();
             Emaillabel.Text = user.Почта;
             Loginlabel.Text = user.Логин;
             Passlabel.Text = user.Пароль;

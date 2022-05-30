@@ -90,6 +90,7 @@ namespace ITHelpWinFrm.Forms
             this.AddRequest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AddRequest.TabIndex = 26;
             this.AddRequest.TabStop = false;
+            this.AddRequest.Click += new System.EventHandler(this.AddRequest_Click);
             // 
             // ReqSroklabel
             // 

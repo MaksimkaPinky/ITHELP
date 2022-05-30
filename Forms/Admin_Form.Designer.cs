@@ -34,7 +34,6 @@ namespace ITHelpWinFrm
             this.panel4 = new System.Windows.Forms.Panel();
             this.UserNamelabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PanNav = new System.Windows.Forms.Panel();
             this.butListUsers = new System.Windows.Forms.Button();
             this.Exitbut = new System.Windows.Forms.Button();
             this.ListReportbut = new System.Windows.Forms.Button();
@@ -58,7 +57,6 @@ namespace ITHelpWinFrm
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.PanNav);
             this.panel2.Controls.Add(this.butListUsers);
             this.panel2.Controls.Add(this.Exitbut);
             this.panel2.Controls.Add(this.ListReportbut);
@@ -101,14 +99,6 @@ namespace ITHelpWinFrm
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // PanNav
-            // 
-            this.PanNav.BackColor = System.Drawing.Color.White;
-            this.PanNav.Location = new System.Drawing.Point(81, 264);
-            this.PanNav.Name = "PanNav";
-            this.PanNav.Size = new System.Drawing.Size(1, 100);
-            this.PanNav.TabIndex = 0;
             // 
             // butListUsers
             // 
@@ -220,6 +210,7 @@ namespace ITHelpWinFrm
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lblTitle
             // 
@@ -303,7 +294,6 @@ namespace ITHelpWinFrm
         private System.Windows.Forms.Button ListEmployeesbut;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button butListUsers;
-        private System.Windows.Forms.Panel PanNav;
         private System.Windows.Forms.Button butClose;
         private System.Windows.Forms.Panel PanformLoader;
         private System.Windows.Forms.Panel panel1;

@@ -54,7 +54,7 @@ namespace ITHelpWinFrm.Forms
             if (FiltrCB.SelectedIndex > 0)
             {
                 listUpdate = listUpdate
-                    .Where(type => type.Фамилия == FiltrCB.SelectedItem
+                    .Where(type => type.EmpPost.Наименование == FiltrCB.SelectedItem
                     .ToString())
                     .ToList();
             }
@@ -86,10 +86,16 @@ namespace ITHelpWinFrm.Forms
 
         private void frmListEmployees_Load(object sender, EventArgs e)
         {
-            var allType = DatabaseContext.db.IT_Employees.Select(type => type.Фамилия).ToList();
+            var allType = DatabaseContext.db.IT_Employees.Select(type => type.EmpPost.Наименование).ToList();
             allType.Insert(0, "Все типы");
             FiltrCB.DataSource = allType;
             FiltrCB.SelectedIndex = 0;
+        }
+
+        private void AddEmp_Click(object sender, EventArgs e)
+        {
+            Reg_Form RegEditForm = new Reg_Form();
+            RegEditForm.ShowDialog();
         }
     }
 }

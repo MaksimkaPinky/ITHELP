@@ -106,5 +106,11 @@ namespace ITHelpWinFrm.Forms
             SortListView();
         }
 
+        private void AddRequest_Click(object sender, EventArgs e)
+        {
+            RequestAdd_Form REQADD = new RequestAdd_Form();
+            REQADD.Show();
+            this.Hide();
+        }
     }
 }

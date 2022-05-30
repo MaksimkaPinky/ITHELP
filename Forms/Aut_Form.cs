@@ -65,19 +65,19 @@ namespace ITHelpWinFrm
             {
                 USER = UsersFind;
                 AUTHF = this;
-                if (USER.Role.Роль == "Администратор")
+                if (USER.Role.Наименование == "Администратор")
                 {
                     Admin_Form FRMAdm = new Admin_Form();
                     FRMAdm.Show();
                     this.Hide();
                 }
-                else if (USER.Role.Роль == "Сотрудник ИТ-отдела")
+                else if (USER.Role.Наименование == "Сотрудник ИТ-отдела")
                 {
                     IT_Employees_Form ITEMP = new IT_Employees_Form();
                     ITEMP.Show();
                     this.Hide();
                 }
-                else if (USER.Role.Роль == "Пользователь")
+                else if (USER.Role.Наименование == "Пользователь")
                 {
                     Users_Form USEFRM = new Users_Form();
                     USEFRM.Show();
@@ -86,7 +86,7 @@ namespace ITHelpWinFrm
                 else
                 {
                     if (string.IsNullOrWhiteSpace(labelRole.Text))
-                        labelRole.Text = $"Роли {USER.Role.Роль} в системе нет!";
+                        labelRole.Text = $"Роли {USER.Role.Наименование} в системе нет!";
                     else
                         labelRole.Text = "";
                 }
@@ -103,6 +103,11 @@ namespace ITHelpWinFrm
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.incom.ru"); //Ссылка на сайт агентства
         }
     }
 }
