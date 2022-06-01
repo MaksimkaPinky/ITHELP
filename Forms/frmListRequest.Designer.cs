@@ -29,21 +29,23 @@ namespace ITHelpWinFrm.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.RequestflowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.adminUserControl2 = new ITHelpWinFrm.AdminUserControl();
             this.FiltrCB = new System.Windows.Forms.ComboBox();
+            this.questBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.criticalityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SearchTB = new System.Windows.Forms.TextBox();
             this.AddRequest = new System.Windows.Forms.PictureBox();
-            this.ReqSroklabel = new System.Windows.Forms.Label();
-            this.ReqFillabel = new System.Windows.Forms.Label();
-            this.PriorityLabel = new System.Windows.Forms.Label();
-            this.ReqIDlabel = new System.Windows.Forms.Label();
             this.RequestflowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.questBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.criticalityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddRequest)).BeginInit();
             this.SuspendLayout();
             // 
             // RequestflowLayoutPanel1
             // 
+            this.RequestflowLayoutPanel1.AutoScroll = true;
             this.RequestflowLayoutPanel1.Controls.Add(this.adminUserControl2);
             this.RequestflowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.RequestflowLayoutPanel1.Location = new System.Drawing.Point(0, 96);
@@ -63,15 +65,25 @@ namespace ITHelpWinFrm.Forms
             // 
             // FiltrCB
             // 
-            this.FiltrCB.DisplayMember = "ФИО";
+            this.FiltrCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.questBindingSource, "ID_Criticality", true));
+            this.FiltrCB.DataSource = this.criticalityBindingSource;
+            this.FiltrCB.DisplayMember = "Описание";
             this.FiltrCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltrCB.FormattingEnabled = true;
             this.FiltrCB.Location = new System.Drawing.Point(430, 12);
             this.FiltrCB.Name = "FiltrCB";
             this.FiltrCB.Size = new System.Drawing.Size(189, 33);
             this.FiltrCB.TabIndex = 28;
-            this.FiltrCB.ValueMember = "ID_IT_Employees";
+            this.FiltrCB.ValueMember = "ID_Criticality";
             this.FiltrCB.SelectedIndexChanged += new System.EventHandler(this.FiltrCB_SelectedIndexChanged);
+            // 
+            // questBindingSource
+            // 
+            this.questBindingSource.DataSource = typeof(ITHelpWinFrm.EF.Quest);
+            // 
+            // criticalityBindingSource
+            // 
+            this.criticalityBindingSource.DataSource = typeof(ITHelpWinFrm.EF.Criticality);
             // 
             // SearchTB
             // 
@@ -92,55 +104,11 @@ namespace ITHelpWinFrm.Forms
             this.AddRequest.TabStop = false;
             this.AddRequest.Click += new System.EventHandler(this.AddRequest_Click);
             // 
-            // ReqSroklabel
-            // 
-            this.ReqSroklabel.AutoSize = true;
-            this.ReqSroklabel.ForeColor = System.Drawing.Color.White;
-            this.ReqSroklabel.Location = new System.Drawing.Point(595, 68);
-            this.ReqSroklabel.Name = "ReqSroklabel";
-            this.ReqSroklabel.Size = new System.Drawing.Size(222, 25);
-            this.ReqSroklabel.TabIndex = 30;
-            this.ReqSroklabel.Text = "Срочность выполнения";
-            // 
-            // ReqFillabel
-            // 
-            this.ReqFillabel.AutoSize = true;
-            this.ReqFillabel.ForeColor = System.Drawing.Color.White;
-            this.ReqFillabel.Location = new System.Drawing.Point(425, 68);
-            this.ReqFillabel.Name = "ReqFillabel";
-            this.ReqFillabel.Size = new System.Drawing.Size(81, 25);
-            this.ReqFillabel.TabIndex = 31;
-            this.ReqFillabel.Text = "Филиал";
-            // 
-            // PriorityLabel
-            // 
-            this.PriorityLabel.AutoSize = true;
-            this.PriorityLabel.ForeColor = System.Drawing.Color.White;
-            this.PriorityLabel.Location = new System.Drawing.Point(173, 68);
-            this.PriorityLabel.Name = "PriorityLabel";
-            this.PriorityLabel.Size = new System.Drawing.Size(107, 25);
-            this.PriorityLabel.TabIndex = 32;
-            this.PriorityLabel.Text = "Приоритет";
-            // 
-            // ReqIDlabel
-            // 
-            this.ReqIDlabel.AutoSize = true;
-            this.ReqIDlabel.ForeColor = System.Drawing.Color.White;
-            this.ReqIDlabel.Location = new System.Drawing.Point(7, 68);
-            this.ReqIDlabel.Name = "ReqIDlabel";
-            this.ReqIDlabel.Size = new System.Drawing.Size(32, 25);
-            this.ReqIDlabel.TabIndex = 29;
-            this.ReqIDlabel.Text = "ID";
-            // 
             // frmListRequest
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.ClientSize = new System.Drawing.Size(833, 476);
-            this.Controls.Add(this.ReqSroklabel);
-            this.Controls.Add(this.ReqFillabel);
-            this.Controls.Add(this.PriorityLabel);
-            this.Controls.Add(this.ReqIDlabel);
             this.Controls.Add(this.FiltrCB);
             this.Controls.Add(this.SearchTB);
             this.Controls.Add(this.AddRequest);
@@ -151,6 +119,8 @@ namespace ITHelpWinFrm.Forms
             this.Text = "frmListRequest";
             this.Load += new System.EventHandler(this.frmListRequest_Load);
             this.RequestflowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.questBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.criticalityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddRequest)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,9 +133,7 @@ namespace ITHelpWinFrm.Forms
         private System.Windows.Forms.ComboBox FiltrCB;
         private System.Windows.Forms.TextBox SearchTB;
         private System.Windows.Forms.PictureBox AddRequest;
-        private System.Windows.Forms.Label ReqSroklabel;
-        private System.Windows.Forms.Label ReqFillabel;
-        private System.Windows.Forms.Label PriorityLabel;
-        private System.Windows.Forms.Label ReqIDlabel;
+        private System.Windows.Forms.BindingSource questBindingSource;
+        private System.Windows.Forms.BindingSource criticalityBindingSource;
     }
 }

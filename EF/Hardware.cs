@@ -9,6 +9,12 @@ namespace ITHelpWinFrm.EF
     [Table("Hardware")]
     public partial class Hardware
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Hardware()
+        {
+            Quest = new HashSet<Quest>();
+        }
+
         [Key]
         public int ID_Hardware { get; set; }
 
@@ -30,5 +36,8 @@ namespace ITHelpWinFrm.EF
         public virtual IT_Employees IT_Employees { get; set; }
 
         public virtual Repair Repair { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Quest> Quest { get; set; }
     }
 }

@@ -53,7 +53,7 @@ namespace ITHelpWinFrm.Forms
             if (FiltrCB.SelectedIndex > 0)
             {
                 listUpdate = listUpdate
-                    .Where(type => type.Приоритет.ToString() == FiltrCB.SelectedItem
+                    .Where(type => type.Criticality.Описание.ToString() == FiltrCB.SelectedItem
                     .ToString())
                     .ToList();
             }
@@ -64,7 +64,7 @@ namespace ITHelpWinFrm.Forms
                     .Where(x => x.ДатаПодачи.ToString().ToLower()
                     .Contains(SearchTB.Text
                     .ToLower()) || x.TypeOfProblem.ToString()
-                    .Contains(SearchTB.Text) || x.ОписаниеПроблемы.ToLower()
+                    .Contains(SearchTB.Text) || x.Criticality.Описание.ToLower()
                     .Contains(SearchTB.Text.ToLower())).ToList();
             }
             RequestflowLayoutPanel1.Controls.Clear();

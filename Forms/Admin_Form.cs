@@ -22,6 +22,7 @@ namespace ITHelpWinFrm
             );
         public static Admin_Form FRMAdm { get; set; }
         Model1 db = new Model1();
+        User use = new User();
         public Admin_Form()
         {
             InitializeComponent();
@@ -38,10 +39,13 @@ namespace ITHelpWinFrm
             this.PanformLoader.Controls.Add(frmListRequest_VRB);
             frmListRequest_VRB.Show();
         }
+        public void GenNameLabel(User user)
+        {
+            UserNamelabel.Text = user.Имя;
+        }
 
         private void Admin_Form_Load(object sender, EventArgs e)
         {
-
         }
 
         private void AddUsers_Click(object sender, EventArgs e)

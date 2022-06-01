@@ -27,6 +27,8 @@ namespace ITHelpWinFrm
             Emaillabel.Text = user.Почта;
             Loginlabel.Text = user.Логин;
             Passlabel.Text = user.Пароль;
+            RoleLab.Text = user.Role.Наименование;
+            PhoneLab.Text = user.Телефон;
         }
         private void label1_Click(object sender, EventArgs e)
         {

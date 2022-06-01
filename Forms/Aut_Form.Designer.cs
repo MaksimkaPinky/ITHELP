@@ -122,6 +122,7 @@ namespace ITHelpWinFrm
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(292, 33);
             this.textBoxLogin.TabIndex = 7;
+            this.textBoxLogin.TextChanged += new System.EventHandler(this.textBoxLogin_TextChanged);
             // 
             // textBoxPassword
             // 

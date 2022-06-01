@@ -48,7 +48,7 @@ namespace ITHelpWinFrm
             // FIOlabel
             // 
             this.FIOlabel.AutoSize = true;
-            this.FIOlabel.Location = new System.Drawing.Point(86, 14);
+            this.FIOlabel.Location = new System.Drawing.Point(63, 14);
             this.FIOlabel.Name = "FIOlabel";
             this.FIOlabel.Size = new System.Drawing.Size(84, 23);
             this.FIOlabel.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace ITHelpWinFrm
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(293, 14);
+            this.labelName.Location = new System.Drawing.Point(63, 37);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(45, 23);
             this.labelName.TabIndex = 0;
@@ -66,7 +66,7 @@ namespace ITHelpWinFrm
             // labelPatronymic
             // 
             this.labelPatronymic.AutoSize = true;
-            this.labelPatronymic.Location = new System.Drawing.Point(444, 14);
+            this.labelPatronymic.Location = new System.Drawing.Point(63, 60);
             this.labelPatronymic.Name = "labelPatronymic";
             this.labelPatronymic.Size = new System.Drawing.Size(83, 23);
             this.labelPatronymic.TabIndex = 0;
@@ -75,7 +75,7 @@ namespace ITHelpWinFrm
             // PostLab
             // 
             this.PostLab.AutoSize = true;
-            this.PostLab.Location = new System.Drawing.Point(626, 14);
+            this.PostLab.Location = new System.Drawing.Point(390, 14);
             this.PostLab.Name = "PostLab";
             this.PostLab.Size = new System.Drawing.Size(99, 23);
             this.PostLab.TabIndex = 0;
@@ -93,7 +93,7 @@ namespace ITHelpWinFrm
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "EMPUserControl";
-            this.Size = new System.Drawing.Size(833, 50);
+            this.Size = new System.Drawing.Size(833, 97);
             this.Load += new System.EventHandler(this.EMPUserControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

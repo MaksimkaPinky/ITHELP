@@ -45,6 +45,16 @@ namespace ITHelpWinFrm.EF
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Office>()
+                .HasMany(e => e.Quest)
+                .WithOptional(e => e.Office)
+                .HasForeignKey(e => e.ID_Office);
+
+            modelBuilder.Entity<Office>()
+                .HasMany(e => e.Quest1)
+                .WithOptional(e => e.Office1)
+                .HasForeignKey(e => e.ID_Office);
+
+            modelBuilder.Entity<Office>()
                 .HasMany(e => e.User)
                 .WithRequired(e => e.Office)
                 .WillCascadeOnDelete(false);

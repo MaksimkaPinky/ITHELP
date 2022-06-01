@@ -20,9 +20,11 @@ namespace ITHelpWinFrm
         public void GenerateDataToRequestUserControl(Quest REQ)
         {
             ReqIDlabel.Text = REQ.ID_Quest.ToString();
-            PriorityLabel.Text = REQ.Приоритет.ToString();
-            ReqFillabel.Text = REQ.НомерКабинета.ToString();
-            ReqSroklabel.Text = REQ.СрочностьВыполнения.ToString();
+            Hardware.Text = REQ.Hardware.Наименование;
+            Crit.Text = REQ.Criticality.Описание;
+            Office.Text = REQ.Office.Адрес;
+            TypeProb.Text = REQ.TypeOfProblem.ТипПроблемы;
+            Cab.Text = REQ.НомерКабинета;
         }
     }
 }

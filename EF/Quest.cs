@@ -23,7 +23,8 @@ namespace ITHelpWinFrm.EF
 
         public int? Приоритет { get; set; }
 
-        public int? НомерКабинета { get; set; }
+        [StringLength(10)]
+        public string НомерКабинета { get; set; }
 
         public int? ID_TypeOfProblem { get; set; }
 
@@ -33,7 +34,7 @@ namespace ITHelpWinFrm.EF
 
         public int? СрочностьВыполнения { get; set; }
 
-        [StringLength(50)]
+        [StringLength(350)]
         public string ОписаниеПроблемы { get; set; }
 
         [Column(TypeName = "date")]
@@ -51,7 +52,11 @@ namespace ITHelpWinFrm.EF
 
         public virtual Criticality Criticality { get; set; }
 
+        public virtual Hardware Hardware { get; set; }
+
         public virtual Office Office { get; set; }
+
+        public virtual Office Office1 { get; set; }
 
         public virtual Status Status { get; set; }
 

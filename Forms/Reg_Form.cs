@@ -41,6 +41,7 @@ namespace ITHelpWinFrm
             USR.ID_Office =iD_OfficeComboBox.SelectedIndex+1;
             USR.ID_Role = iD_RoleComboBox.SelectedIndex+1;
             USR.ID_Gender = iD_GenderComboBox.SelectedIndex+1;
+            USR.Телефон = телефонMaskedTextBox.Text;
 
             DatabaseContext.db.User.Add(USR);
 
@@ -68,9 +69,7 @@ namespace ITHelpWinFrm
 
         private void Closebut_Click_1(object sender, EventArgs e)
         {
-            Admin_Form FRMAdm = new Admin_Form();
             this.Close();
-            FRMAdm.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

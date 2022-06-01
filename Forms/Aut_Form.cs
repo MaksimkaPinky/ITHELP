@@ -109,5 +109,10 @@ namespace ITHelpWinFrm
         {
             System.Diagnostics.Process.Start("https://www.incom.ru"); //Ссылка на сайт агентства
         }
+
+        private void textBoxLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

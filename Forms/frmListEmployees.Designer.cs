@@ -35,15 +35,12 @@ namespace ITHelpWinFrm.Forms
             this.EMPflowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.adminUserControl2 = new ITHelpWinFrm.AdminUserControl();
             this.FiltrCB = new System.Windows.Forms.ComboBox();
-            this.iTEmployeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empPostBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.PostLabel = new System.Windows.Forms.Label();
-            this.FIOlabel = new System.Windows.Forms.Label();
-            this.ID_Label = new System.Windows.Forms.Label();
+            this.iTEmployeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp)).BeginInit();
             this.EMPflowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iTEmployeesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empPostBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTEmployeesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchTB
@@ -99,52 +96,19 @@ namespace ITHelpWinFrm.Forms
             this.FiltrCB.ValueMember = "ID_Emp_Post";
             this.FiltrCB.SelectedIndexChanged += new System.EventHandler(this.FiltrCB_SelectedIndexChanged);
             // 
-            // iTEmployeesBindingSource
-            // 
-            this.iTEmployeesBindingSource.DataSource = typeof(ITHelpWinFrm.EF.IT_Employees);
-            // 
             // empPostBindingSource
             // 
             this.empPostBindingSource.DataSource = typeof(ITHelpWinFrm.EF.EmpPost);
             // 
-            // PostLabel
+            // iTEmployeesBindingSource
             // 
-            this.PostLabel.AutoSize = true;
-            this.PostLabel.ForeColor = System.Drawing.Color.White;
-            this.PostLabel.Location = new System.Drawing.Point(603, 68);
-            this.PostLabel.Name = "PostLabel";
-            this.PostLabel.Size = new System.Drawing.Size(112, 25);
-            this.PostLabel.TabIndex = 25;
-            this.PostLabel.Text = "Должность";
-            // 
-            // FIOlabel
-            // 
-            this.FIOlabel.AutoSize = true;
-            this.FIOlabel.ForeColor = System.Drawing.Color.White;
-            this.FIOlabel.Location = new System.Drawing.Point(228, 68);
-            this.FIOlabel.Name = "FIOlabel";
-            this.FIOlabel.Size = new System.Drawing.Size(56, 25);
-            this.FIOlabel.TabIndex = 26;
-            this.FIOlabel.Text = "ФИО";
-            // 
-            // ID_Label
-            // 
-            this.ID_Label.AutoSize = true;
-            this.ID_Label.ForeColor = System.Drawing.Color.White;
-            this.ID_Label.Location = new System.Drawing.Point(18, 68);
-            this.ID_Label.Name = "ID_Label";
-            this.ID_Label.Size = new System.Drawing.Size(32, 25);
-            this.ID_Label.TabIndex = 27;
-            this.ID_Label.Text = "ID";
+            this.iTEmployeesBindingSource.DataSource = typeof(ITHelpWinFrm.EF.IT_Employees);
             // 
             // frmListEmployees
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.ClientSize = new System.Drawing.Size(833, 476);
-            this.Controls.Add(this.PostLabel);
-            this.Controls.Add(this.FIOlabel);
-            this.Controls.Add(this.ID_Label);
             this.Controls.Add(this.FiltrCB);
             this.Controls.Add(this.SearchTB);
             this.Controls.Add(this.AddEmp);
@@ -156,8 +120,8 @@ namespace ITHelpWinFrm.Forms
             this.Load += new System.EventHandler(this.frmListEmployees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp)).EndInit();
             this.EMPflowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iTEmployeesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empPostBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTEmployeesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,9 +135,6 @@ namespace ITHelpWinFrm.Forms
         private AdminUserControl adminUserControl2;
         private System.Windows.Forms.ComboBox FiltrCB;
         private System.Windows.Forms.BindingSource iTEmployeesBindingSource;
-        private System.Windows.Forms.Label PostLabel;
-        private System.Windows.Forms.Label FIOlabel;
-        private System.Windows.Forms.Label ID_Label;
         private System.Windows.Forms.BindingSource empPostBindingSource;
     }
 }

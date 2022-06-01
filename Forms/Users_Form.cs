@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ITHelpWinFrm.EF;
+using ITHelpWinFrm.Forms;
 
 namespace ITHelpWinFrm.Forms
 {
     public partial class Users_Form : Form
     {
+        User use= new User();
         public Users_Form()
         {
             InitializeComponent();
+            NameUser.Text = $"Добро пожаловать {use.Имя}  {use.Отчество} !";
         }
 
         private void CloseBut_Click(object sender, EventArgs e)
@@ -25,8 +29,7 @@ namespace ITHelpWinFrm.Forms
         private void AddEmp_Click(object sender, EventArgs e)
         {
             RequestAdd_Form REQADD = new RequestAdd_Form();
-            REQADD.Show();
-            this.Hide();
+            REQADD.ShowDialog();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

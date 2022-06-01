@@ -40,6 +40,7 @@ namespace ITHelpWinFrm
             System.Windows.Forms.Label парольLabel;
             System.Windows.Forms.Label почтаLabel;
             System.Windows.Forms.Label фамилияLabel;
+            System.Windows.Forms.Label телефонLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reg_Form));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Closebut = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@ namespace ITHelpWinFrm
             this.парольTextBox = new System.Windows.Forms.TextBox();
             this.почтаTextBox = new System.Windows.Forms.TextBox();
             this.фамилияTextBox = new System.Windows.Forms.TextBox();
+            this.телефонMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             iD_GenderLabel = new System.Windows.Forms.Label();
             iD_OfficeLabel = new System.Windows.Forms.Label();
             iD_RoleLabel = new System.Windows.Forms.Label();
@@ -70,6 +72,7 @@ namespace ITHelpWinFrm
             парольLabel = new System.Windows.Forms.Label();
             почтаLabel = new System.Windows.Forms.Label();
             фамилияLabel = new System.Windows.Forms.Label();
+            телефонLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
@@ -167,6 +170,15 @@ namespace ITHelpWinFrm
             фамилияLabel.Size = new System.Drawing.Size(99, 25);
             фамилияLabel.TabIndex = 42;
             фамилияLabel.Text = "Фамилия:";
+            // 
+            // телефонLabel
+            // 
+            телефонLabel.AutoSize = true;
+            телефонLabel.Location = new System.Drawing.Point(474, 334);
+            телефонLabel.Name = "телефонLabel";
+            телефонLabel.Size = new System.Drawing.Size(92, 25);
+            телефонLabel.TabIndex = 43;
+            телефонLabel.Text = "Телефон:";
             // 
             // panel1
             // 
@@ -290,6 +302,7 @@ namespace ITHelpWinFrm
             // 
             this.дата_РожденияDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.userBindingSource, "Дата_Рождения", true));
             this.дата_РожденияDateTimePicker.Location = new System.Drawing.Point(189, 251);
+            this.дата_РожденияDateTimePicker.MinDate = new System.DateTime(1932, 5, 31, 0, 0, 0, 0);
             this.дата_РожденияDateTimePicker.Name = "дата_РожденияDateTimePicker";
             this.дата_РожденияDateTimePicker.Size = new System.Drawing.Size(200, 33);
             this.дата_РожденияDateTimePicker.TabIndex = 31;
@@ -342,11 +355,22 @@ namespace ITHelpWinFrm
             this.фамилияTextBox.Size = new System.Drawing.Size(200, 33);
             this.фамилияTextBox.TabIndex = 43;
             // 
+            // телефонMaskedTextBox
+            // 
+            this.телефонMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Телефон", true));
+            this.телефонMaskedTextBox.Location = new System.Drawing.Point(633, 334);
+            this.телефонMaskedTextBox.Mask = "+7 (000) 000 -00 -00  ";
+            this.телефонMaskedTextBox.Name = "телефонMaskedTextBox";
+            this.телефонMaskedTextBox.Size = new System.Drawing.Size(200, 33);
+            this.телефонMaskedTextBox.TabIndex = 44;
+            // 
             // Reg_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.ClientSize = new System.Drawing.Size(938, 610);
+            this.Controls.Add(телефонLabel);
+            this.Controls.Add(this.телефонMaskedTextBox);
             this.Controls.Add(iD_GenderLabel);
             this.Controls.Add(this.iD_GenderComboBox);
             this.Controls.Add(iD_OfficeLabel);
@@ -410,5 +434,6 @@ namespace ITHelpWinFrm
         private System.Windows.Forms.TextBox почтаTextBox;
         private System.Windows.Forms.TextBox фамилияTextBox;
         private System.Windows.Forms.Button Closebut;
+        private System.Windows.Forms.MaskedTextBox телефонMaskedTextBox;
     }
 }

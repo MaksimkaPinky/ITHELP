@@ -118,8 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ИТ сотрудники" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ИТ сотрудники.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Дом" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Дом.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ПоказатьГлаз" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ПоказатьГлаз.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Выход" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Выход.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,25 +139,22 @@
   <data name="Отчеты" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Отчеты.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Заявка" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Заявка.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlusAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlusAdd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Человек" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Человек.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="customer_support_service_icon_220689" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer_support_service_icon_220689.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PlusAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlusAdd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Заявка" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Заявка.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ПоказатьГлаз" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ПоказатьГлаз.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="incom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\incom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ИТ сотрудники" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ИТ сотрудники.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Вопрос" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Вопрос1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

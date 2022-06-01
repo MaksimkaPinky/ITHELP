@@ -37,6 +37,8 @@ namespace ITHelpWinFrm
             this.Passlabel = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.labelPatronymic = new System.Windows.Forms.Label();
+            this.RoleLab = new System.Windows.Forms.Label();
+            this.PhoneLab = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ID_label
@@ -56,7 +58,7 @@ namespace ITHelpWinFrm
             this.LFPlabel.AutoSize = true;
             this.LFPlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.LFPlabel.ForeColor = System.Drawing.Color.White;
-            this.LFPlabel.Location = new System.Drawing.Point(27, 10);
+            this.LFPlabel.Location = new System.Drawing.Point(36, 10);
             this.LFPlabel.Name = "LFPlabel";
             this.LFPlabel.Size = new System.Drawing.Size(84, 23);
             this.LFPlabel.TabIndex = 0;
@@ -68,7 +70,7 @@ namespace ITHelpWinFrm
             this.Birthday_label.AutoSize = true;
             this.Birthday_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.Birthday_label.ForeColor = System.Drawing.Color.White;
-            this.Birthday_label.Location = new System.Drawing.Point(364, 10);
+            this.Birthday_label.Location = new System.Drawing.Point(261, 10);
             this.Birthday_label.Name = "Birthday_label";
             this.Birthday_label.Size = new System.Drawing.Size(135, 23);
             this.Birthday_label.TabIndex = 0;
@@ -80,7 +82,7 @@ namespace ITHelpWinFrm
             this.Emaillabel.AutoSize = true;
             this.Emaillabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.Emaillabel.ForeColor = System.Drawing.Color.White;
-            this.Emaillabel.Location = new System.Drawing.Point(505, 10);
+            this.Emaillabel.Location = new System.Drawing.Point(261, 43);
             this.Emaillabel.Name = "Emaillabel";
             this.Emaillabel.Size = new System.Drawing.Size(59, 23);
             this.Emaillabel.TabIndex = 0;
@@ -92,7 +94,7 @@ namespace ITHelpWinFrm
             this.Loginlabel.AutoSize = true;
             this.Loginlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.Loginlabel.ForeColor = System.Drawing.Color.White;
-            this.Loginlabel.Location = new System.Drawing.Point(632, 10);
+            this.Loginlabel.Location = new System.Drawing.Point(558, 10);
             this.Loginlabel.Name = "Loginlabel";
             this.Loginlabel.Size = new System.Drawing.Size(59, 23);
             this.Loginlabel.TabIndex = 0;
@@ -104,7 +106,7 @@ namespace ITHelpWinFrm
             this.Passlabel.AutoSize = true;
             this.Passlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.Passlabel.ForeColor = System.Drawing.Color.White;
-            this.Passlabel.Location = new System.Drawing.Point(738, 10);
+            this.Passlabel.Location = new System.Drawing.Point(558, 43);
             this.Passlabel.Name = "Passlabel";
             this.Passlabel.Size = new System.Drawing.Size(71, 23);
             this.Passlabel.TabIndex = 0;
@@ -116,7 +118,7 @@ namespace ITHelpWinFrm
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.labelName.ForeColor = System.Drawing.Color.White;
-            this.labelName.Location = new System.Drawing.Point(141, 10);
+            this.labelName.Location = new System.Drawing.Point(36, 43);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(45, 23);
             this.labelName.TabIndex = 0;
@@ -128,17 +130,39 @@ namespace ITHelpWinFrm
             this.labelPatronymic.AutoSize = true;
             this.labelPatronymic.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.labelPatronymic.ForeColor = System.Drawing.Color.White;
-            this.labelPatronymic.Location = new System.Drawing.Point(221, 10);
+            this.labelPatronymic.Location = new System.Drawing.Point(37, 75);
             this.labelPatronymic.Name = "labelPatronymic";
             this.labelPatronymic.Size = new System.Drawing.Size(83, 23);
             this.labelPatronymic.TabIndex = 0;
             this.labelPatronymic.Text = "Отчество";
             this.labelPatronymic.Click += new System.EventHandler(this.label1_Click);
             // 
+            // RoleLab
+            // 
+            this.RoleLab.AutoSize = true;
+            this.RoleLab.ForeColor = System.Drawing.Color.White;
+            this.RoleLab.Location = new System.Drawing.Point(261, 75);
+            this.RoleLab.Name = "RoleLab";
+            this.RoleLab.Size = new System.Drawing.Size(48, 23);
+            this.RoleLab.TabIndex = 1;
+            this.RoleLab.Text = "Роль";
+            // 
+            // PhoneLab
+            // 
+            this.PhoneLab.AutoSize = true;
+            this.PhoneLab.ForeColor = System.Drawing.Color.White;
+            this.PhoneLab.Location = new System.Drawing.Point(558, 75);
+            this.PhoneLab.Name = "PhoneLab";
+            this.PhoneLab.Size = new System.Drawing.Size(77, 23);
+            this.PhoneLab.TabIndex = 2;
+            this.PhoneLab.Text = "Телефон";
+            // 
             // AdminUserControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
+            this.Controls.Add(this.PhoneLab);
+            this.Controls.Add(this.RoleLab);
             this.Controls.Add(this.Passlabel);
             this.Controls.Add(this.Loginlabel);
             this.Controls.Add(this.Emaillabel);
@@ -149,7 +173,7 @@ namespace ITHelpWinFrm
             this.Controls.Add(this.ID_label);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.Name = "AdminUserControl";
-            this.Size = new System.Drawing.Size(833, 50);
+            this.Size = new System.Drawing.Size(833, 130);
             this.Load += new System.EventHandler(this.AdminUserControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,5 +190,7 @@ namespace ITHelpWinFrm
         private System.Windows.Forms.Label Passlabel;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelPatronymic;
+        private System.Windows.Forms.Label RoleLab;
+        private System.Windows.Forms.Label PhoneLab;
     }
 }

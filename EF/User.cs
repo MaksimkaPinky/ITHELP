@@ -41,6 +41,9 @@ namespace ITHelpWinFrm.EF
         [StringLength(50)]
         public string Пароль { get; set; }
 
+        [StringLength(50)]
+        public string Телефон { get; set; }
+
         public virtual Gender Gender { get; set; }
 
         public virtual Office Office { get; set; }

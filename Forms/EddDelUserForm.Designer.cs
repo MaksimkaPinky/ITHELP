@@ -33,7 +33,6 @@ namespace ITHelpWinFrm.Forms
             System.Windows.Forms.Label iD_GenderLabel;
             System.Windows.Forms.Label iD_OfficeLabel;
             System.Windows.Forms.Label iD_RoleLabel;
-            System.Windows.Forms.Label iD_UserLabel;
             System.Windows.Forms.Label дата_РожденияLabel;
             System.Windows.Forms.Label имяLabel;
             System.Windows.Forms.Label логинLabel;
@@ -51,7 +50,6 @@ namespace ITHelpWinFrm.Forms
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iD_OfficeComboBox = new System.Windows.Forms.ComboBox();
             this.iD_RoleComboBox = new System.Windows.Forms.ComboBox();
-            this.iD_UserComboBox = new System.Windows.Forms.ComboBox();
             this.дата_РожденияDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.имяTextBox = new System.Windows.Forms.TextBox();
             this.логинTextBox = new System.Windows.Forms.TextBox();
@@ -60,10 +58,12 @@ namespace ITHelpWinFrm.Forms
             this.почтаTextBox = new System.Windows.Forms.TextBox();
             this.фамилияTextBox = new System.Windows.Forms.TextBox();
             this.EditBut = new System.Windows.Forms.Button();
+            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.officeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             iD_GenderLabel = new System.Windows.Forms.Label();
             iD_OfficeLabel = new System.Windows.Forms.Label();
             iD_RoleLabel = new System.Windows.Forms.Label();
-            iD_UserLabel = new System.Windows.Forms.Label();
             дата_РожденияLabel = new System.Windows.Forms.Label();
             имяLabel = new System.Windows.Forms.Label();
             логинLabel = new System.Windows.Forms.Label();
@@ -74,48 +74,42 @@ namespace ITHelpWinFrm.Forms
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.officeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // iD_GenderLabel
             // 
             iD_GenderLabel.AutoSize = true;
-            iD_GenderLabel.Location = new System.Drawing.Point(419, 104);
+            iD_GenderLabel.Location = new System.Drawing.Point(419, 111);
             iD_GenderLabel.Name = "iD_GenderLabel";
-            iD_GenderLabel.Size = new System.Drawing.Size(105, 25);
+            iD_GenderLabel.Size = new System.Drawing.Size(53, 25);
             iD_GenderLabel.TabIndex = 28;
-            iD_GenderLabel.Text = "ID Gender:";
+            iD_GenderLabel.Text = "Пол:";
             // 
             // iD_OfficeLabel
             // 
             iD_OfficeLabel.AutoSize = true;
-            iD_OfficeLabel.Location = new System.Drawing.Point(419, 143);
+            iD_OfficeLabel.Location = new System.Drawing.Point(419, 150);
             iD_OfficeLabel.Name = "iD_OfficeLabel";
-            iD_OfficeLabel.Size = new System.Drawing.Size(94, 25);
+            iD_OfficeLabel.Size = new System.Drawing.Size(65, 25);
             iD_OfficeLabel.TabIndex = 30;
-            iD_OfficeLabel.Text = "ID Office:";
+            iD_OfficeLabel.Text = "Офис:";
             // 
             // iD_RoleLabel
             // 
             iD_RoleLabel.AutoSize = true;
-            iD_RoleLabel.Location = new System.Drawing.Point(419, 182);
+            iD_RoleLabel.Location = new System.Drawing.Point(419, 189);
             iD_RoleLabel.Name = "iD_RoleLabel";
-            iD_RoleLabel.Size = new System.Drawing.Size(79, 25);
+            iD_RoleLabel.Size = new System.Drawing.Size(59, 25);
             iD_RoleLabel.TabIndex = 32;
-            iD_RoleLabel.Text = "ID Role:";
-            // 
-            // iD_UserLabel
-            // 
-            iD_UserLabel.AutoSize = true;
-            iD_UserLabel.Location = new System.Drawing.Point(419, 221);
-            iD_UserLabel.Name = "iD_UserLabel";
-            iD_UserLabel.Size = new System.Drawing.Size(81, 25);
-            iD_UserLabel.TabIndex = 34;
-            iD_UserLabel.Text = "ID User:";
+            iD_RoleLabel.Text = "Роль:";
             // 
             // дата_РожденияLabel
             // 
             дата_РожденияLabel.AutoSize = true;
-            дата_РожденияLabel.Location = new System.Drawing.Point(419, 261);
+            дата_РожденияLabel.Location = new System.Drawing.Point(419, 226);
             дата_РожденияLabel.Name = "дата_РожденияLabel";
             дата_РожденияLabel.Size = new System.Drawing.Size(153, 25);
             дата_РожденияLabel.TabIndex = 36;
@@ -124,7 +118,7 @@ namespace ITHelpWinFrm.Forms
             // имяLabel
             // 
             имяLabel.AutoSize = true;
-            имяLabel.Location = new System.Drawing.Point(419, 299);
+            имяLabel.Location = new System.Drawing.Point(12, 189);
             имяLabel.Name = "имяLabel";
             имяLabel.Size = new System.Drawing.Size(56, 25);
             имяLabel.TabIndex = 38;
@@ -142,7 +136,7 @@ namespace ITHelpWinFrm.Forms
             // отчествоLabel
             // 
             отчествоLabel.AutoSize = true;
-            отчествоLabel.Location = new System.Drawing.Point(12, 147);
+            отчествоLabel.Location = new System.Drawing.Point(12, 225);
             отчествоLabel.Name = "отчествоLabel";
             отчествоLabel.Size = new System.Drawing.Size(99, 25);
             отчествоLabel.TabIndex = 42;
@@ -151,7 +145,7 @@ namespace ITHelpWinFrm.Forms
             // парольLabel
             // 
             парольLabel.AutoSize = true;
-            парольLabel.Location = new System.Drawing.Point(12, 186);
+            парольLabel.Location = new System.Drawing.Point(12, 267);
             парольLabel.Name = "парольLabel";
             парольLabel.Size = new System.Drawing.Size(84, 25);
             парольLabel.TabIndex = 44;
@@ -160,7 +154,7 @@ namespace ITHelpWinFrm.Forms
             // почтаLabel
             // 
             почтаLabel.AutoSize = true;
-            почтаLabel.Location = new System.Drawing.Point(12, 225);
+            почтаLabel.Location = new System.Drawing.Point(419, 267);
             почтаLabel.Name = "почтаLabel";
             почтаLabel.Size = new System.Drawing.Size(71, 25);
             почтаLabel.TabIndex = 46;
@@ -169,7 +163,7 @@ namespace ITHelpWinFrm.Forms
             // фамилияLabel
             // 
             фамилияLabel.AutoSize = true;
-            фамилияLabel.Location = new System.Drawing.Point(12, 264);
+            фамилияLabel.Location = new System.Drawing.Point(12, 147);
             фамилияLabel.Name = "фамилияLabel";
             фамилияLabel.Size = new System.Drawing.Size(99, 25);
             фамилияLabel.TabIndex = 48;
@@ -231,21 +225,25 @@ namespace ITHelpWinFrm.Forms
             this.labForm.AutoSize = true;
             this.labForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.labForm.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.labForm.Location = new System.Drawing.Point(318, 36);
+            this.labForm.Location = new System.Drawing.Point(303, 36);
             this.labForm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labForm.Name = "labForm";
-            this.labForm.Size = new System.Drawing.Size(179, 25);
+            this.labForm.Size = new System.Drawing.Size(210, 25);
             this.labForm.TabIndex = 0;
-            this.labForm.Text = "Имя пользователя";
+            this.labForm.Text = "Данные пользователя";
             // 
             // iD_GenderComboBox
             // 
             this.iD_GenderComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "ID_Gender", true));
+            this.iD_GenderComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userBindingSource, "ID_Gender", true));
+            this.iD_GenderComboBox.DataSource = this.genderBindingSource;
+            this.iD_GenderComboBox.DisplayMember = "Наименование";
             this.iD_GenderComboBox.FormattingEnabled = true;
-            this.iD_GenderComboBox.Location = new System.Drawing.Point(578, 101);
+            this.iD_GenderComboBox.Location = new System.Drawing.Point(578, 105);
             this.iD_GenderComboBox.Name = "iD_GenderComboBox";
             this.iD_GenderComboBox.Size = new System.Drawing.Size(200, 33);
             this.iD_GenderComboBox.TabIndex = 29;
+            this.iD_GenderComboBox.ValueMember = "ID_Gender";
             // 
             // userBindingSource
             // 
@@ -254,34 +252,34 @@ namespace ITHelpWinFrm.Forms
             // iD_OfficeComboBox
             // 
             this.iD_OfficeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "ID_Office", true));
+            this.iD_OfficeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userBindingSource, "ID_Office", true));
+            this.iD_OfficeComboBox.DataSource = this.officeBindingSource;
+            this.iD_OfficeComboBox.DisplayMember = "Адрес";
             this.iD_OfficeComboBox.FormattingEnabled = true;
-            this.iD_OfficeComboBox.Location = new System.Drawing.Point(578, 140);
+            this.iD_OfficeComboBox.Location = new System.Drawing.Point(578, 144);
             this.iD_OfficeComboBox.Name = "iD_OfficeComboBox";
             this.iD_OfficeComboBox.Size = new System.Drawing.Size(200, 33);
             this.iD_OfficeComboBox.TabIndex = 31;
+            this.iD_OfficeComboBox.ValueMember = "ID_Office";
             // 
             // iD_RoleComboBox
             // 
             this.iD_RoleComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "ID_Role", true));
+            this.iD_RoleComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userBindingSource, "ID_Role", true));
+            this.iD_RoleComboBox.DataSource = this.roleBindingSource;
+            this.iD_RoleComboBox.DisplayMember = "Наименование";
             this.iD_RoleComboBox.FormattingEnabled = true;
-            this.iD_RoleComboBox.Location = new System.Drawing.Point(578, 179);
+            this.iD_RoleComboBox.Location = new System.Drawing.Point(578, 183);
             this.iD_RoleComboBox.Name = "iD_RoleComboBox";
             this.iD_RoleComboBox.Size = new System.Drawing.Size(200, 33);
             this.iD_RoleComboBox.TabIndex = 33;
-            // 
-            // iD_UserComboBox
-            // 
-            this.iD_UserComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "ID_User", true));
-            this.iD_UserComboBox.FormattingEnabled = true;
-            this.iD_UserComboBox.Location = new System.Drawing.Point(578, 218);
-            this.iD_UserComboBox.Name = "iD_UserComboBox";
-            this.iD_UserComboBox.Size = new System.Drawing.Size(200, 33);
-            this.iD_UserComboBox.TabIndex = 35;
+            this.iD_RoleComboBox.ValueMember = "ID_Role";
             // 
             // дата_РожденияDateTimePicker
             // 
             this.дата_РожденияDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.userBindingSource, "Дата_Рождения", true));
-            this.дата_РожденияDateTimePicker.Location = new System.Drawing.Point(578, 257);
+            this.дата_РожденияDateTimePicker.Location = new System.Drawing.Point(578, 222);
+            this.дата_РожденияDateTimePicker.MinDate = new System.DateTime(1932, 5, 31, 0, 0, 0, 0);
             this.дата_РожденияDateTimePicker.Name = "дата_РожденияDateTimePicker";
             this.дата_РожденияDateTimePicker.Size = new System.Drawing.Size(200, 33);
             this.дата_РожденияDateTimePicker.TabIndex = 37;
@@ -289,7 +287,7 @@ namespace ITHelpWinFrm.Forms
             // имяTextBox
             // 
             this.имяTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Имя", true));
-            this.имяTextBox.Location = new System.Drawing.Point(578, 296);
+            this.имяTextBox.Location = new System.Drawing.Point(171, 183);
             this.имяTextBox.Name = "имяTextBox";
             this.имяTextBox.Size = new System.Drawing.Size(200, 33);
             this.имяTextBox.TabIndex = 39;
@@ -305,7 +303,7 @@ namespace ITHelpWinFrm.Forms
             // отчествоTextBox
             // 
             this.отчествоTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Отчество", true));
-            this.отчествоTextBox.Location = new System.Drawing.Point(171, 144);
+            this.отчествоTextBox.Location = new System.Drawing.Point(171, 222);
             this.отчествоTextBox.Name = "отчествоTextBox";
             this.отчествоTextBox.Size = new System.Drawing.Size(200, 33);
             this.отчествоTextBox.TabIndex = 43;
@@ -313,7 +311,7 @@ namespace ITHelpWinFrm.Forms
             // парольTextBox
             // 
             this.парольTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Пароль", true));
-            this.парольTextBox.Location = new System.Drawing.Point(171, 183);
+            this.парольTextBox.Location = new System.Drawing.Point(171, 264);
             this.парольTextBox.Name = "парольTextBox";
             this.парольTextBox.Size = new System.Drawing.Size(200, 33);
             this.парольTextBox.TabIndex = 45;
@@ -321,7 +319,7 @@ namespace ITHelpWinFrm.Forms
             // почтаTextBox
             // 
             this.почтаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Почта", true));
-            this.почтаTextBox.Location = new System.Drawing.Point(171, 222);
+            this.почтаTextBox.Location = new System.Drawing.Point(578, 264);
             this.почтаTextBox.Name = "почтаTextBox";
             this.почтаTextBox.Size = new System.Drawing.Size(200, 33);
             this.почтаTextBox.TabIndex = 47;
@@ -329,7 +327,7 @@ namespace ITHelpWinFrm.Forms
             // фамилияTextBox
             // 
             this.фамилияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "Фамилия", true));
-            this.фамилияTextBox.Location = new System.Drawing.Point(171, 261);
+            this.фамилияTextBox.Location = new System.Drawing.Point(171, 144);
             this.фамилияTextBox.Name = "фамилияTextBox";
             this.фамилияTextBox.Size = new System.Drawing.Size(200, 33);
             this.фамилияTextBox.TabIndex = 49;
@@ -346,6 +344,18 @@ namespace ITHelpWinFrm.Forms
             this.EditBut.UseVisualStyleBackColor = true;
             this.EditBut.Click += new System.EventHandler(this.EditBut_Click);
             // 
+            // genderBindingSource
+            // 
+            this.genderBindingSource.DataSource = typeof(ITHelpWinFrm.EF.Gender);
+            // 
+            // officeBindingSource
+            // 
+            this.officeBindingSource.DataSource = typeof(ITHelpWinFrm.EF.Office);
+            // 
+            // roleBindingSource
+            // 
+            this.roleBindingSource.DataSource = typeof(ITHelpWinFrm.EF.Role);
+            // 
             // EddDelUserForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -358,8 +368,6 @@ namespace ITHelpWinFrm.Forms
             this.Controls.Add(this.iD_OfficeComboBox);
             this.Controls.Add(iD_RoleLabel);
             this.Controls.Add(this.iD_RoleComboBox);
-            this.Controls.Add(iD_UserLabel);
-            this.Controls.Add(this.iD_UserComboBox);
             this.Controls.Add(дата_РожденияLabel);
             this.Controls.Add(this.дата_РожденияDateTimePicker);
             this.Controls.Add(имяLabel);
@@ -386,6 +394,9 @@ namespace ITHelpWinFrm.Forms
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.officeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,7 +413,6 @@ namespace ITHelpWinFrm.Forms
         private System.Windows.Forms.ComboBox iD_GenderComboBox;
         private System.Windows.Forms.ComboBox iD_OfficeComboBox;
         private System.Windows.Forms.ComboBox iD_RoleComboBox;
-        private System.Windows.Forms.ComboBox iD_UserComboBox;
         private System.Windows.Forms.DateTimePicker дата_РожденияDateTimePicker;
         private System.Windows.Forms.TextBox имяTextBox;
         private System.Windows.Forms.TextBox логинTextBox;
@@ -411,5 +421,8 @@ namespace ITHelpWinFrm.Forms
         private System.Windows.Forms.TextBox почтаTextBox;
         private System.Windows.Forms.TextBox фамилияTextBox;
         private System.Windows.Forms.Button EditBut;
+        private System.Windows.Forms.BindingSource genderBindingSource;
+        private System.Windows.Forms.BindingSource officeBindingSource;
+        private System.Windows.Forms.BindingSource roleBindingSource;
     }
 }

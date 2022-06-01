@@ -263,6 +263,7 @@
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Report.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Role.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.Status.datasource" />
+    <None Include="Properties\DataSources\ITHelpWinFrm.EF.sysdiagrams.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.TypeOfProblem.datasource" />
     <None Include="Properties\DataSources\ITHelpWinFrm.EF.User.datasource" />
     <None Include="Properties\Settings.settings">
@@ -309,6 +310,8 @@
     <None Include="Resources\Выход.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Вопрос.png" />
+    <None Include="Resources\Вопрос1.png" />
     <Content Include="Resources\ИТ сотрудники.png" />
     <Resource Include="Resources\customer_support_service_icon_220689.ico" />
   </ItemGroup>

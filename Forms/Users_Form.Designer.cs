@@ -33,10 +33,9 @@ namespace ITHelpWinFrm.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.CloseBut = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.NameUser = new System.Windows.Forms.Label();
             this.AddEmp = new System.Windows.Forms.PictureBox();
             this.Exitbut = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp)).BeginInit();
@@ -47,7 +46,7 @@ namespace ITHelpWinFrm.Forms
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.CloseBut);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.NameUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -81,17 +80,17 @@ namespace ITHelpWinFrm.Forms
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // label3
+            // NameUser
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label3.Location = new System.Drawing.Point(325, 36);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Имя пользователя";
+            this.NameUser.AutoSize = true;
+            this.NameUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
+            this.NameUser.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.NameUser.Location = new System.Drawing.Point(325, 36);
+            this.NameUser.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.NameUser.Name = "NameUser";
+            this.NameUser.Size = new System.Drawing.Size(179, 25);
+            this.NameUser.TabIndex = 0;
+            this.NameUser.Text = "Имя пользователя";
             // 
             // AddEmp
             // 
@@ -121,21 +120,11 @@ namespace ITHelpWinFrm.Forms
             this.Exitbut.UseVisualStyleBackColor = true;
             this.Exitbut.Click += new System.EventHandler(this.Exitbut_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(188, 223);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(468, 25);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "ДОБАВИТЬ ПАНЕЛЬ С ЗАЯВКАМИ ПОЛЬЗОВАТЕЛЯ";
-            // 
             // Users_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Exitbut);
             this.Controls.Add(this.AddEmp);
             this.Controls.Add(this.panel1);
@@ -149,7 +138,6 @@ namespace ITHelpWinFrm.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -157,10 +145,9 @@ namespace ITHelpWinFrm.Forms
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label NameUser;
         private System.Windows.Forms.Button CloseBut;
         private System.Windows.Forms.PictureBox AddEmp;
         private System.Windows.Forms.Button Exitbut;
-        private System.Windows.Forms.Label label1;
     }
 }
