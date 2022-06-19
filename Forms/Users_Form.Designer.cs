@@ -36,6 +36,7 @@ namespace ITHelpWinFrm.Forms
             this.NameUser = new System.Windows.Forms.Label();
             this.AddEmp = new System.Windows.Forms.PictureBox();
             this.Exitbut = new System.Windows.Forms.Button();
+            this.layoutpanelUSER = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp)).BeginInit();
@@ -120,11 +121,20 @@ namespace ITHelpWinFrm.Forms
             this.Exitbut.UseVisualStyleBackColor = true;
             this.Exitbut.Click += new System.EventHandler(this.Exitbut_Click);
             // 
+            // layoutpanelUSER
+            // 
+            this.layoutpanelUSER.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.layoutpanelUSER.Location = new System.Drawing.Point(0, 130);
+            this.layoutpanelUSER.Name = "layoutpanelUSER";
+            this.layoutpanelUSER.Size = new System.Drawing.Size(800, 262);
+            this.layoutpanelUSER.TabIndex = 25;
+            // 
             // Users_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.layoutpanelUSER);
             this.Controls.Add(this.Exitbut);
             this.Controls.Add(this.AddEmp);
             this.Controls.Add(this.panel1);
@@ -149,5 +159,6 @@ namespace ITHelpWinFrm.Forms
         private System.Windows.Forms.Button CloseBut;
         private System.Windows.Forms.PictureBox AddEmp;
         private System.Windows.Forms.Button Exitbut;
+        private System.Windows.Forms.FlowLayoutPanel layoutpanelUSER;
     }
 }

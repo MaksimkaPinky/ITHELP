@@ -161,6 +161,7 @@ namespace ITHelpWinFrm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.PhoneLab);
             this.Controls.Add(this.RoleLab);
             this.Controls.Add(this.Passlabel);
@@ -173,7 +174,7 @@ namespace ITHelpWinFrm
             this.Controls.Add(this.ID_label);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.Name = "AdminUserControl";
-            this.Size = new System.Drawing.Size(833, 130);
+            this.Size = new System.Drawing.Size(831, 128);
             this.Load += new System.EventHandler(this.AdminUserControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

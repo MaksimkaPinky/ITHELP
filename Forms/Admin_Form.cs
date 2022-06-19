@@ -21,8 +21,11 @@ namespace ITHelpWinFrm
             int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse
             );
         public static Admin_Form FRMAdm { get; set; }
+        public Label labelformADM { get { return UserName; } }
+        public Label labelformADMPatr { get { return UserPatron; } }
         Model1 db = new Model1();
         User use = new User();
+        
         public Admin_Form()
         {
             InitializeComponent();
@@ -41,11 +44,12 @@ namespace ITHelpWinFrm
         }
         public void GenNameLabel(User user)
         {
-            UserNamelabel.Text = user.Имя;
+            UserPatron.Text = $"{user.Имя} " + $"{user.Отчество}";
         }
 
         private void Admin_Form_Load(object sender, EventArgs e)
-        {
+        { 
+
         }
 
         private void AddUsers_Click(object sender, EventArgs e)
@@ -56,7 +60,7 @@ namespace ITHelpWinFrm
             REGFRM.Show();
         }
 
-        private void UserNamelabel_Click(object sender, EventArgs e)
+        public void UserNamelabel_Click(object sender, EventArgs e)
         {
 
         }

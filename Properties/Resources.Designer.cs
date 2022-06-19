@@ -113,6 +113,16 @@ namespace ITHelpWinFrm.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ВопросБел {
+            get {
+                object obj = ResourceManager.GetObject("ВопросБел", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Выход {
             get {
                 object obj = ResourceManager.GetObject("Выход", resourceCulture);

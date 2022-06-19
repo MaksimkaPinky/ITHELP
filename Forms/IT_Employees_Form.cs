@@ -16,6 +16,7 @@ namespace ITHelpWinFrm.Forms
     {
         public List<Quest> REQ = new List<Quest>(DatabaseContext.db.Quest);
         public static List<RequestUserControl> selectedREQUserControls = new List<RequestUserControl>();
+        public Label itname { get {return LBLNameForm; } }
         public IT_Employees_Form()
         {
             InitializeComponent();

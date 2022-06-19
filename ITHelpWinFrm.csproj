@@ -312,6 +312,7 @@
   <ItemGroup>
     <Content Include="Resources\Вопрос.png" />
     <None Include="Resources\Вопрос1.png" />
+    <None Include="Resources\ВопросБел.png" />
     <Content Include="Resources\ИТ сотрудники.png" />
     <Resource Include="Resources\customer_support_service_icon_220689.ico" />
   </ItemGroup>

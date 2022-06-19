@@ -39,6 +39,8 @@ namespace ITHelpWinFrm.Forms
             QUE.ID_Criticality =iD_CriticalityComboBox.SelectedIndex + 1;
             QUE.ID_Office = iD_OfficeComboBox.SelectedIndex + 1;
             QUE.ID_TypeOfProblem = iD_TypeOfProblemComboBox.SelectedIndex + 1;
+            
+            
 
             DatabaseContext.db.Quest.Add(QUE);
 

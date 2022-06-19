@@ -56,5 +56,43 @@ namespace ITHelpWinFrm.Forms
         {
             System.Diagnostics.Process.Start("https://www.incom.ru"); //Ссылка на сайт агентства
         }
+
+        private void дата_РожденияDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime errdate = дата_РожденияDateTimePicker.Value;
+            if (errdate.Year > (DateTime.Now.Year - 18))
+            {
+                MessageBox.Show("Выбрана неверная дата рождения!");
+                дата_РожденияDateTimePicker.Controls.Clear();
+                return;
+            }
+        }
+
+        private void фамилияTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void имяTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void отчествоTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsLetter(ch))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

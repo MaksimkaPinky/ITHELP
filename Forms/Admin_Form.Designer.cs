@@ -32,7 +32,8 @@ namespace ITHelpWinFrm
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Form));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.UserNamelabel = new System.Windows.Forms.Label();
+            this.UserName = new System.Windows.Forms.Label();
+            this.UserPatron = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.butListUsers = new System.Windows.Forms.Button();
             this.Exitbut = new System.Windows.Forms.Button();
@@ -71,31 +72,47 @@ namespace ITHelpWinFrm
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.UserNamelabel);
+            this.panel4.Controls.Add(this.UserName);
+            this.panel4.Controls.Add(this.UserPatron);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 100);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(186, 100);
+            this.panel4.Size = new System.Drawing.Size(186, 110);
             this.panel4.TabIndex = 4;
             // 
-            // UserNamelabel
+            // UserName
             // 
-            this.UserNamelabel.AutoSize = true;
-            this.UserNamelabel.ForeColor = System.Drawing.Color.White;
-            this.UserNamelabel.Location = new System.Drawing.Point(32, 64);
-            this.UserNamelabel.Name = "UserNamelabel";
-            this.UserNamelabel.Size = new System.Drawing.Size(102, 25);
-            this.UserNamelabel.TabIndex = 2;
-            this.UserNamelabel.Text = "UserName";
-            this.UserNamelabel.Click += new System.EventHandler(this.UserNamelabel_Click);
+            this.UserName.AutoSize = true;
+            this.UserName.BackColor = System.Drawing.Color.Transparent;
+            this.UserName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.UserName.ForeColor = System.Drawing.Color.White;
+            this.UserName.Location = new System.Drawing.Point(0, 60);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(147, 25);
+            this.UserName.TabIndex = 2;
+            this.UserName.Text = "UserPatronymic";
+            this.UserName.Click += new System.EventHandler(this.UserNamelabel_Click);
+            // 
+            // UserPatron
+            // 
+            this.UserPatron.AutoSize = true;
+            this.UserPatron.BackColor = System.Drawing.Color.Transparent;
+            this.UserPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.UserPatron.ForeColor = System.Drawing.Color.White;
+            this.UserPatron.Location = new System.Drawing.Point(0, 85);
+            this.UserPatron.Name = "UserPatron";
+            this.UserPatron.Size = new System.Drawing.Size(102, 25);
+            this.UserPatron.TabIndex = 2;
+            this.UserPatron.Text = "UserName";
+            this.UserPatron.Click += new System.EventHandler(this.UserNamelabel_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ITHelpWinFrm.Properties.Resources.Аватар;
             this.pictureBox1.Location = new System.Drawing.Point(54, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(63, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -225,13 +242,14 @@ namespace ITHelpWinFrm
             // 
             // butClose
             // 
+            this.butClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.butClose.FlatAppearance.BorderSize = 0;
             this.butClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butClose.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
-            this.butClose.Location = new System.Drawing.Point(779, 12);
+            this.butClose.Location = new System.Drawing.Point(791, 0);
             this.butClose.Name = "butClose";
-            this.butClose.Size = new System.Drawing.Size(42, 48);
+            this.butClose.Size = new System.Drawing.Size(42, 100);
             this.butClose.TabIndex = 19;
             this.butClose.Text = "x";
             this.butClose.UseVisualStyleBackColor = true;
@@ -270,6 +288,8 @@ namespace ITHelpWinFrm
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximumSize = new System.Drawing.Size(1019, 800);
+            this.MinimumSize = new System.Drawing.Size(1019, 576);
             this.Name = "Admin_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_Form";
@@ -297,10 +317,11 @@ namespace ITHelpWinFrm
         private System.Windows.Forms.Button butClose;
         private System.Windows.Forms.Panel PanformLoader;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label UserNamelabel;
+        private System.Windows.Forms.Label UserPatron;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label UserName;
     }
 }

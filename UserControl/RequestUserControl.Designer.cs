@@ -104,6 +104,7 @@ namespace ITHelpWinFrm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.TypeProb);
             this.Controls.Add(this.Hardware);
             this.Controls.Add(this.label2);
@@ -114,7 +115,7 @@ namespace ITHelpWinFrm
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "RequestUserControl";
-            this.Size = new System.Drawing.Size(833, 90);
+            this.Size = new System.Drawing.Size(831, 88);
             this.ResumeLayout(false);
             this.PerformLayout();
 

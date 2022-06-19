@@ -15,6 +15,7 @@ namespace ITHelpWinFrm.Forms
     public partial class Users_Form : Form
     {
         User use= new User();
+        public Label nameuser { get{ return NameUser; } }
         public Users_Form()
         {
             InitializeComponent();

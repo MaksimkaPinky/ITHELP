@@ -35,7 +35,6 @@ namespace ITHelpWinFrm.Forms
             this.adminUserControl2 = new ITHelpWinFrm.AdminUserControl();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SearchTB = new System.Windows.Forms.TextBox();
-            this.descCB = new System.Windows.Forms.CheckBox();
             this.FiltrCB = new System.Windows.Forms.ComboBox();
             this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.AddUsers)).BeginInit();
@@ -69,6 +68,7 @@ namespace ITHelpWinFrm.Forms
             // adminUserControl2
             // 
             this.adminUserControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
+            this.adminUserControl2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.adminUserControl2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.adminUserControl2.Location = new System.Drawing.Point(6, 6);
             this.adminUserControl2.Margin = new System.Windows.Forms.Padding(6);
@@ -88,19 +88,9 @@ namespace ITHelpWinFrm.Forms
             this.SearchTB.TabIndex = 20;
             this.SearchTB.TextChanged += new System.EventHandler(this.SearchTB_TextChanged);
             // 
-            // descCB
-            // 
-            this.descCB.AutoSize = true;
-            this.descCB.Location = new System.Drawing.Point(621, 21);
-            this.descCB.Name = "descCB";
-            this.descCB.Size = new System.Drawing.Size(15, 14);
-            this.descCB.TabIndex = 21;
-            this.descCB.UseVisualStyleBackColor = true;
-            this.descCB.CheckedChanged += new System.EventHandler(this.descCB_CheckedChanged);
-            // 
             // FiltrCB
             // 
-            this.FiltrCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roleBindingSource, "Наименование", true));
+            this.FiltrCB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userBindingSource, "ID_Role", true));
             this.FiltrCB.DataSource = this.roleBindingSource;
             this.FiltrCB.DisplayMember = "Наименование";
             this.FiltrCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -122,7 +112,6 @@ namespace ITHelpWinFrm.Forms
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.ClientSize = new System.Drawing.Size(833, 476);
             this.Controls.Add(this.FiltrCB);
-            this.Controls.Add(this.descCB);
             this.Controls.Add(this.SearchTB);
             this.Controls.Add(this.AddUsers);
             this.Controls.Add(this.UserflowLayoutPanel1);
@@ -147,7 +136,6 @@ namespace ITHelpWinFrm.Forms
         private AdminUserControl adminUserControl2;
         private System.Windows.Forms.TextBox SearchTB;
         private System.Windows.Forms.BindingSource userBindingSource;
-        private System.Windows.Forms.CheckBox descCB;
         private System.Windows.Forms.ComboBox FiltrCB;
         private System.Windows.Forms.BindingSource roleBindingSource;
     }

@@ -68,18 +68,22 @@ namespace ITHelpWinFrm
                 if (USER.Role.Наименование == "Администратор")
                 {
                     Admin_Form FRMAdm = new Admin_Form();
+                    FRMAdm.labelformADM.Text =$"{USER.Имя} ";
+                    FRMAdm.labelformADMPatr.Text = $"{USER.Отчество}";
                     FRMAdm.Show();
                     this.Hide();
                 }
                 else if (USER.Role.Наименование == "Сотрудник ИТ-отдела")
                 {
                     IT_Employees_Form ITEMP = new IT_Employees_Form();
+                    ITEMP.itname.Text = $"{USER.Имя} " + $"{USER.Отчество}";
                     ITEMP.Show();
                     this.Hide();
                 }
                 else if (USER.Role.Наименование == "Пользователь")
                 {
                     Users_Form USEFRM = new Users_Form();
+                    USEFRM.nameuser.Text = $"{USER.Имя} "+$"{USER.Отчество}";
                     USEFRM.Show();
                     this.Hide();
                 }

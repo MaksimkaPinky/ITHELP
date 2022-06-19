@@ -23,7 +23,6 @@ namespace ITHelpWinFrm.Forms
         }
         private void GenerateReportUserControlList(List<Report> reports)
         {
-            ReportflowLayoutPanel1.Controls.Clear();
             foreach (var a in reports)
             {
                 ReportUserControl1 RUC = new ReportUserControl1();
@@ -60,14 +59,6 @@ namespace ITHelpWinFrm.Forms
                     .Contains(SearchTB.Text.ToLower())).ToList();
             }
 
-            // Фильтрация
-            if (FiltrCB.SelectedIndex > 0)
-            {
-                listUpdate = listUpdate
-                    .Where(type => type.IT_Employees.Фамилия == FiltrCB.SelectedItem
-                    .ToString())
-                    .ToList();
-            }
             ReportflowLayoutPanel1.Controls.Clear();
             GenerateReportUserControlList(listUpdate);
         }
@@ -77,6 +68,18 @@ namespace ITHelpWinFrm.Forms
             REPADD.Show();
             this.Hide();
 
+        }
+
+        private void frmListReport_Load(object sender, EventArgs e)
+        {
+  
+            SortListView();
+        }
+
+
+        private void SearchTB_TextChanged(object sender, EventArgs e)
+        {
+            SortListView();
         }
     }
 }

@@ -61,16 +61,19 @@ namespace ITHelpWinFrm.Forms
             // датаНаписанияLabel
             // 
             датаНаписанияLabel.AutoSize = true;
-            датаНаписанияLabel.Location = new System.Drawing.Point(185, 250);
+            датаНаписанияLabel.ForeColor = System.Drawing.Color.White;
+            датаНаписанияLabel.Location = new System.Drawing.Point(185, 289);
             датаНаписанияLabel.Name = "датаНаписанияLabel";
             датаНаписанияLabel.Size = new System.Drawing.Size(161, 25);
             датаНаписанияLabel.TabIndex = 21;
             датаНаписанияLabel.Text = "Дата Написания:";
+            датаНаписанияLabel.Visible = false;
             // 
             // описаниеLabel
             // 
             описаниеLabel.AutoSize = true;
-            описаниеLabel.Location = new System.Drawing.Point(185, 288);
+            описаниеLabel.ForeColor = System.Drawing.Color.White;
+            описаниеLabel.Location = new System.Drawing.Point(185, 249);
             описаниеLabel.Name = "описаниеLabel";
             описаниеLabel.Size = new System.Drawing.Size(104, 25);
             описаниеLabel.TabIndex = 23;
@@ -79,6 +82,7 @@ namespace ITHelpWinFrm.Forms
             // iD_IT_EmployeesLabel
             // 
             iD_IT_EmployeesLabel.AutoSize = true;
+            iD_IT_EmployeesLabel.ForeColor = System.Drawing.Color.White;
             iD_IT_EmployeesLabel.Location = new System.Drawing.Point(185, 171);
             iD_IT_EmployeesLabel.Name = "iD_IT_EmployeesLabel";
             iD_IT_EmployeesLabel.Size = new System.Drawing.Size(106, 25);
@@ -88,6 +92,7 @@ namespace ITHelpWinFrm.Forms
             // iD_QuestLabel
             // 
             iD_QuestLabel.AutoSize = true;
+            iD_QuestLabel.ForeColor = System.Drawing.Color.White;
             iD_QuestLabel.Location = new System.Drawing.Point(185, 210);
             iD_QuestLabel.Name = "iD_QuestLabel";
             iD_QuestLabel.Size = new System.Drawing.Size(98, 25);
@@ -123,11 +128,12 @@ namespace ITHelpWinFrm.Forms
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Image = global::ITHelpWinFrm.Properties.Resources.incom;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(159, 82);
+            this.pictureBox2.Size = new System.Drawing.Size(159, 88);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -138,7 +144,7 @@ namespace ITHelpWinFrm.Forms
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label3.Location = new System.Drawing.Point(364, 35);
+            this.label3.Location = new System.Drawing.Point(405, 35);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 25);
@@ -147,12 +153,13 @@ namespace ITHelpWinFrm.Forms
             // 
             // SaveBut
             // 
+            this.SaveBut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.SaveBut.FlatAppearance.BorderSize = 0;
             this.SaveBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveBut.ForeColor = System.Drawing.Color.White;
-            this.SaveBut.Location = new System.Drawing.Point(338, 389);
+            this.SaveBut.Location = new System.Drawing.Point(0, 400);
             this.SaveBut.Name = "SaveBut";
-            this.SaveBut.Size = new System.Drawing.Size(124, 36);
+            this.SaveBut.Size = new System.Drawing.Size(800, 50);
             this.SaveBut.TabIndex = 14;
             this.SaveBut.Text = "Сохранить";
             this.SaveBut.UseVisualStyleBackColor = true;
@@ -161,10 +168,11 @@ namespace ITHelpWinFrm.Forms
             // датаНаписанияDateTimePicker
             // 
             this.датаНаписанияDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.reportBindingSource, "ДатаНаписания", true));
-            this.датаНаписанияDateTimePicker.Location = new System.Drawing.Point(352, 246);
+            this.датаНаписанияDateTimePicker.Location = new System.Drawing.Point(352, 285);
             this.датаНаписанияDateTimePicker.Name = "датаНаписанияDateTimePicker";
             this.датаНаписанияDateTimePicker.Size = new System.Drawing.Size(200, 33);
             this.датаНаписанияDateTimePicker.TabIndex = 22;
+            this.датаНаписанияDateTimePicker.Visible = false;
             // 
             // reportBindingSource
             // 
@@ -173,7 +181,7 @@ namespace ITHelpWinFrm.Forms
             // описаниеTextBox
             // 
             this.описаниеTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reportBindingSource, "Описание", true));
-            this.описаниеTextBox.Location = new System.Drawing.Point(352, 285);
+            this.описаниеTextBox.Location = new System.Drawing.Point(352, 246);
             this.описаниеTextBox.Name = "описаниеTextBox";
             this.описаниеTextBox.Size = new System.Drawing.Size(200, 33);
             this.описаниеTextBox.TabIndex = 24;

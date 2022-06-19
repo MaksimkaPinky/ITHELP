@@ -85,6 +85,7 @@ namespace ITHelpWinFrm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.PostLab);
             this.Controls.Add(this.labelPatronymic);
             this.Controls.Add(this.labelName);
@@ -93,7 +94,7 @@ namespace ITHelpWinFrm
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "EMPUserControl";
-            this.Size = new System.Drawing.Size(833, 97);
+            this.Size = new System.Drawing.Size(831, 95);
             this.Load += new System.EventHandler(this.EMPUserControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

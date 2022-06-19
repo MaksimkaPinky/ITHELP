@@ -63,11 +63,12 @@ namespace ITHelpWinFrm
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Image = global::ITHelpWinFrm.Properties.Resources.incom;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(159, 82);
+            this.pictureBox2.Size = new System.Drawing.Size(159, 88);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -87,6 +88,9 @@ namespace ITHelpWinFrm
             // 
             // ButExit
             // 
+            this.ButExit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ButExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.ButExit.FlatAppearance.BorderSize = 0;
             this.ButExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -102,6 +106,9 @@ namespace ITHelpWinFrm
             // 
             // ButLogIn
             // 
+            this.ButLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ButLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
             this.ButLogIn.FlatAppearance.BorderSize = 0;
             this.ButLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -117,6 +124,9 @@ namespace ITHelpWinFrm
             // 
             // textBoxLogin
             // 
+            this.textBoxLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxLogin.Location = new System.Drawing.Point(138, 136);
             this.textBoxLogin.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxLogin.Name = "textBoxLogin";
@@ -126,6 +136,9 @@ namespace ITHelpWinFrm
             // 
             // textBoxPassword
             // 
+            this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPassword.Location = new System.Drawing.Point(138, 201);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxPassword.Name = "textBoxPassword";
@@ -186,6 +199,9 @@ namespace ITHelpWinFrm
             // 
             // pictureBoxEye
             // 
+            this.pictureBoxEye.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxEye.Image = global::ITHelpWinFrm.Properties.Resources.ПоказатьГлаз;
             this.pictureBoxEye.Location = new System.Drawing.Point(442, 190);
             this.pictureBoxEye.Margin = new System.Windows.Forms.Padding(6);

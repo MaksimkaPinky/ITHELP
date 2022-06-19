@@ -162,17 +162,18 @@ namespace ITHelpWinFrm.Forms
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(20, 23, 20, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(662, 109);
+            this.panel1.Size = new System.Drawing.Size(791, 109);
             this.panel1.TabIndex = 14;
             // 
             // CloseBut
             // 
+            this.CloseBut.Dock = System.Windows.Forms.DockStyle.Right;
             this.CloseBut.FlatAppearance.BorderSize = 0;
             this.CloseBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseBut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
-            this.CloseBut.Location = new System.Drawing.Point(587, 0);
+            this.CloseBut.Location = new System.Drawing.Point(716, 0);
             this.CloseBut.Name = "CloseBut";
-            this.CloseBut.Size = new System.Drawing.Size(75, 35);
+            this.CloseBut.Size = new System.Drawing.Size(75, 109);
             this.CloseBut.TabIndex = 4;
             this.CloseBut.Text = "x";
             this.CloseBut.UseVisualStyleBackColor = true;
@@ -180,11 +181,12 @@ namespace ITHelpWinFrm.Forms
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Image = global::ITHelpWinFrm.Properties.Resources.incom;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(188, 103);
+            this.pictureBox2.Size = new System.Drawing.Size(188, 109);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -196,7 +198,7 @@ namespace ITHelpWinFrm.Forms
             this.LAB_Request.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.LAB_Request.ForeColor = System.Drawing.Color.Black;
             this.LAB_Request.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.LAB_Request.Location = new System.Drawing.Point(359, 38);
+            this.LAB_Request.Location = new System.Drawing.Point(434, 42);
             this.LAB_Request.Margin = new System.Windows.Forms.Padding(11, 0, 11, 0);
             this.LAB_Request.Name = "LAB_Request";
             this.LAB_Request.Size = new System.Drawing.Size(73, 25);
@@ -205,12 +207,13 @@ namespace ITHelpWinFrm.Forms
             // 
             // Regbut
             // 
+            this.Regbut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Regbut.FlatAppearance.BorderSize = 0;
             this.Regbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Regbut.ForeColor = System.Drawing.Color.White;
-            this.Regbut.Location = new System.Drawing.Point(232, 710);
+            this.Regbut.Location = new System.Drawing.Point(0, 714);
             this.Regbut.Name = "Regbut";
-            this.Regbut.Size = new System.Drawing.Size(191, 50);
+            this.Regbut.Size = new System.Drawing.Size(791, 50);
             this.Regbut.TabIndex = 24;
             this.Regbut.Text = "Отправить";
             this.Regbut.UseVisualStyleBackColor = true;
@@ -230,7 +233,7 @@ namespace ITHelpWinFrm.Forms
             this.iD_CriticalityComboBox.FormattingEnabled = true;
             this.iD_CriticalityComboBox.Location = new System.Drawing.Point(243, 121);
             this.iD_CriticalityComboBox.Name = "iD_CriticalityComboBox";
-            this.iD_CriticalityComboBox.Size = new System.Drawing.Size(338, 33);
+            this.iD_CriticalityComboBox.Size = new System.Drawing.Size(487, 33);
             this.iD_CriticalityComboBox.TabIndex = 25;
             this.iD_CriticalityComboBox.ValueMember = "ID_Criticality";
             // 
@@ -248,7 +251,7 @@ namespace ITHelpWinFrm.Forms
             this.iD_HardwareComboBox.FormattingEnabled = true;
             this.iD_HardwareComboBox.Location = new System.Drawing.Point(243, 160);
             this.iD_HardwareComboBox.Name = "iD_HardwareComboBox";
-            this.iD_HardwareComboBox.Size = new System.Drawing.Size(338, 33);
+            this.iD_HardwareComboBox.Size = new System.Drawing.Size(487, 33);
             this.iD_HardwareComboBox.TabIndex = 27;
             this.iD_HardwareComboBox.ValueMember = "ID_Hardware";
             // 
@@ -266,7 +269,7 @@ namespace ITHelpWinFrm.Forms
             this.iD_OfficeComboBox.FormattingEnabled = true;
             this.iD_OfficeComboBox.Location = new System.Drawing.Point(243, 198);
             this.iD_OfficeComboBox.Name = "iD_OfficeComboBox";
-            this.iD_OfficeComboBox.Size = new System.Drawing.Size(338, 33);
+            this.iD_OfficeComboBox.Size = new System.Drawing.Size(487, 33);
             this.iD_OfficeComboBox.TabIndex = 29;
             this.iD_OfficeComboBox.ValueMember = "ID_Office";
             // 
@@ -284,7 +287,7 @@ namespace ITHelpWinFrm.Forms
             this.iD_TypeOfProblemComboBox.FormattingEnabled = true;
             this.iD_TypeOfProblemComboBox.Location = new System.Drawing.Point(243, 237);
             this.iD_TypeOfProblemComboBox.Name = "iD_TypeOfProblemComboBox";
-            this.iD_TypeOfProblemComboBox.Size = new System.Drawing.Size(338, 33);
+            this.iD_TypeOfProblemComboBox.Size = new System.Drawing.Size(487, 33);
             this.iD_TypeOfProblemComboBox.TabIndex = 33;
             this.iD_TypeOfProblemComboBox.ValueMember = "ID_TypeOfProblem";
             // 
@@ -305,8 +308,9 @@ namespace ITHelpWinFrm.Forms
             // 
             this.номерКабинетаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.questBindingSource, "НомерКабинета", true));
             this.номерКабинетаTextBox.Location = new System.Drawing.Point(243, 276);
+            this.номерКабинетаTextBox.MaxLength = 10;
             this.номерКабинетаTextBox.Name = "номерКабинетаTextBox";
-            this.номерКабинетаTextBox.Size = new System.Drawing.Size(338, 33);
+            this.номерКабинетаTextBox.Size = new System.Drawing.Size(487, 33);
             this.номерКабинетаTextBox.TabIndex = 43;
             // 
             // statusBindingSource
@@ -315,8 +319,8 @@ namespace ITHelpWinFrm.Forms
             // 
             // CriticalPB
             // 
-            this.CriticalPB.Image = global::ITHelpWinFrm.Properties.Resources.Вопрос;
-            this.CriticalPB.Location = new System.Drawing.Point(619, 121);
+            this.CriticalPB.Image = global::ITHelpWinFrm.Properties.Resources.ВопросБел;
+            this.CriticalPB.Location = new System.Drawing.Point(748, 124);
             this.CriticalPB.Name = "CriticalPB";
             this.CriticalPB.Size = new System.Drawing.Size(31, 33);
             this.CriticalPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -325,8 +329,8 @@ namespace ITHelpWinFrm.Forms
             // 
             // HardwarePB
             // 
-            this.HardwarePB.Image = global::ITHelpWinFrm.Properties.Resources.Вопрос;
-            this.HardwarePB.Location = new System.Drawing.Point(619, 155);
+            this.HardwarePB.Image = global::ITHelpWinFrm.Properties.Resources.ВопросБел;
+            this.HardwarePB.Location = new System.Drawing.Point(748, 158);
             this.HardwarePB.Name = "HardwarePB";
             this.HardwarePB.Size = new System.Drawing.Size(31, 33);
             this.HardwarePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -335,8 +339,8 @@ namespace ITHelpWinFrm.Forms
             // 
             // TypeOfProblemPB
             // 
-            this.TypeOfProblemPB.Image = global::ITHelpWinFrm.Properties.Resources.Вопрос;
-            this.TypeOfProblemPB.Location = new System.Drawing.Point(619, 237);
+            this.TypeOfProblemPB.Image = global::ITHelpWinFrm.Properties.Resources.ВопросБел;
+            this.TypeOfProblemPB.Location = new System.Drawing.Point(748, 240);
             this.TypeOfProblemPB.Name = "TypeOfProblemPB";
             this.TypeOfProblemPB.Size = new System.Drawing.Size(31, 33);
             this.TypeOfProblemPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -345,8 +349,8 @@ namespace ITHelpWinFrm.Forms
             // 
             // TitProblemPB
             // 
-            this.TitProblemPB.Image = global::ITHelpWinFrm.Properties.Resources.Вопрос;
-            this.TitProblemPB.Location = new System.Drawing.Point(619, 309);
+            this.TitProblemPB.Image = global::ITHelpWinFrm.Properties.Resources.ВопросБел;
+            this.TitProblemPB.Location = new System.Drawing.Point(748, 312);
             this.TitProblemPB.Name = "TitProblemPB";
             this.TitProblemPB.Size = new System.Drawing.Size(31, 33);
             this.TitProblemPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -359,14 +363,14 @@ namespace ITHelpWinFrm.Forms
             this.описаниеПроблемыTextBox.Location = new System.Drawing.Point(12, 348);
             this.описаниеПроблемыTextBox.Multiline = true;
             this.описаниеПроблемыTextBox.Name = "описаниеПроблемыTextBox";
-            this.описаниеПроблемыTextBox.Size = new System.Drawing.Size(633, 255);
+            this.описаниеПроблемыTextBox.Size = new System.Drawing.Size(767, 255);
             this.описаниеПроблемыTextBox.TabIndex = 45;
             // 
             // RequestAdd_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(77)))), ((int)(((byte)(162)))));
-            this.ClientSize = new System.Drawing.Size(662, 764);
+            this.ClientSize = new System.Drawing.Size(791, 764);
             this.Controls.Add(this.TitProblemPB);
             this.Controls.Add(this.TypeOfProblemPB);
             this.Controls.Add(this.HardwarePB);
